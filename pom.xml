@@ -134,4 +134,9 @@
             </build>
         </profile>
     </profiles>
+    <url>https://github.com/Unipoole/unipoole-client</url>
+    <scm>
+    	<url>https://github.com/Unipoole/unipoole-client/tree/master</url>
+    	<connection>scm:git:https://github.com/Unipoole/unipoole-client/tree/master</connection>
+    </scm>
 </project>
