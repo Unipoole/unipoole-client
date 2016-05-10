@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=8" />
+
+        <link href="../../unipoole/skin/sakai/tool_base.css" type="text/css" rel="stylesheet" media="all"/>
+        <link href="../../unipoole/skin/neo-unisa-fixed/tool.css" type="text/css" rel="stylesheet" media="all"/>
+        <link href="skin/schedule.css" type="text/css" rel="stylesheet" media="all"/>
+
+        <script type="text/javascript" language="JavaScript" src="../../unipoole/js/sakai/headscripts.js"></script>
+
+        <script type="text/javascript" language="JavaScript" src="../../unipoole/js/jquery/jquery-1.7.2.js"></script>
+        <script type="text/javascript" language="JavaScript" src="../../unipoole/js/moment/moment.min.js"></script>
+        <script type="text/javascript" language="JavaScript" src="../../unipoole/js/unipoole.utilities.js"></script>
+        <script type="text/javascript" language="JavaScript" src="../../unipoole/js/unipoole.variables.js"></script>
+        <script type="text/javascript" language="JavaScript" src="../../unipoole/js/handlebars/handlebars.js"></script>
+        <script type="text/javascript" language="JavaScript" src="../../unipoole/js/unipoole.handlebar.helpers.js"></script>
+        
+        <script type="text/javascript" language="JavaScript" src="js/schedule.utils.js"></script>
+        <script type="text/javascript" language="JavaScript" src="js/schedule.details.js"></script>
+    </head>
+
+    <body >
+        <div class="navPanel">
+            <div class="itemNav">
+                <input id="topPrevious" type="submit" value="&lt; Last Event" >
+                <input type="submit" value="Go to Today" onclick="window.open('schedule.html?view=agendaDay', '_self');">
+                <input type="button" value="Back to Calendar" onclick="window.open('schedule.html', '_self');">
+                <input id="topNext" type="submit" value="Next Event &gt;" >
+            </div>
+        </div>
+        <div class="portletBody"></div> 
+        <div class="navPanel">
+            <div class="itemNav">
+                <input id="bottomPrevious" type="submit" value="&lt; Last Event" >
+                <input type="submit" value="Go to Today" onclick="window.open('schedule.html?view=agendaDay', '_self');">
+                <input type="button" value="Back to Calendar" onclick="window.open('schedule.html', '_self');">
+                <input id="bottomNext" type="submit" value="Next Event &gt;" >
+            </div>
+        </div>
+    </body>
+</html>

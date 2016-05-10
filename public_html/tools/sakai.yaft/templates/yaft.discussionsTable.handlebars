@@ -1,0 +1,41 @@
+{{!  
+    This template builds the resources detail html
+
+    @author OpenCollab
+    @since 1.0.0
+}}
+<table class="listHier" id="yaft_forum_table">
+    <thead>
+        <tr>
+            <th align="left" class="yaftSortableTableHeader"><div>Topic</div></th>
+            <th class="yaftSortableTableHeader"><div>Started By</div></th>
+            <th class="yaftSortableTableHeader"><div>Messages</div></th>
+            <th class="yaftSortableTableHeader"><div>Unread</div></th>
+            <th class="yaftSortableTableHeader"><div>Last Message</div></th>
+            <th align="left"><div>Options</div></th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each this}}
+        <tr class="yaftForumRow">
+            <td style="max-width: 250px;">
+                <a title="Enter this topic" href="viewDiscussion.html?id={{@key}}">{{topic}}</a>
+                {{#if graded_label}}
+                <br>
+                <span class="yaft_small_graded_in_label">{{graded_label}}</span>
+                {{/if}}
+            </td>
+            <td><a class="profile" href="javascript:;">{{creator_name}}</a></td>
+            <td align="center">{{messageCount this}}</td>
+            <td align="center">{{unreadCount this}}</td>
+            <td>{{lastMessage this}}</td>
+            <td align="center">
+            {{#isActiveStudent creator_id}}
+                <a href="createTopic.html?edit=yes&id={{@key}}">Edit</a>
+            {{/isActiveStudent}}
+            
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>

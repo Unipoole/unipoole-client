@@ -1,0 +1,66 @@
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <meta http-equiv="Content-Style-Type" content="text/css"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=8" />
+        <title>Samigo</title>
+
+        <link href="../../unipoole/skin/sakai/tool_base.css" type="text/css" rel="stylesheet" media="all"/>
+        <link href="../../unipoole/skin/neo-unisa-fixed/tool.css" type="text/css" rel="stylesheet" media="all"/>
+        <link href="../../unipoole/skin/datatables/jquery.dataTables.css" type="text/css" rel="stylesheet" media="all"/>
+        <link href="../../unipoole/skin/jqueryUI/jquery-ui.css" type="text/css" rel="stylesheet" media="all"/>
+        <link href="../../unipoole/skin/unipoole.css" type="text/css" rel="stylesheet" media="all"/>
+
+        <link href="skin/samigo.css" type="text/css" rel="stylesheet" media="all"/>
+
+        <script type="text/javascript" language="JavaScript" src="../../unipoole/js/sakai/headscripts.js"></script>
+
+        <script type="text/javascript" language="JavaScript" src="../../unipoole/js/jquery/jquery-1.7.2.js"></script>
+        <script type="text/javascript" language="JavaScript" src="../../unipoole/js/jqueryUI/jquery-ui.js"></script>
+        <script type="text/javascript" language="JavaScript" src="../../unipoole/js/unipoole.utilities.js"></script>
+        <script type="text/javascript" language="JavaScript" src="../../unipoole/js/handlebars/handlebars.js"></script>
+        <script type="text/javascript" language="JavaScript" src="../../unipoole/js/unipoole.handlebar.helpers.js"></script>
+        <script type="text/javascript" language="JavaScript" src="../../unipoole/js/moment/moment.min.js"></script>
+        <script type="text/javascript" language="JavaScript" src="../../unipoole/js/datatables/jquery.dataTables.js"></script>
+        <script type="text/javascript" language="JavaScript" src="../../unipoole/js/unipoole.variables.js"></script>
+        <script type="text/javascript" language="JavaScript" src="../../unipoole/js/unipoole.message.js"></script>
+        <script type="text/javascript" language="JavaScript" src="../../unipoole/js/unipoole.auth.js"></script>
+
+
+        <script type="text/javascript" language="JavaScript" src="js/samigo.js"></script>
+
+
+    </head>
+    <body marginwidth="0" marginheight="0">
+        <div class="portletBody">
+            <h3>Assessments </h3>
+
+            <div class="tier1">
+                <h4>Available Assessments</h4>
+                <p class="tier2">The assessments listed below are currently available for you to take.<br/>
+                    <a href="#" id="btnGoOnline">Do assessment online</a>
+                </p>
+                
+            </div>
+            <div class="tier2" id="availableTableContainer"></div>
+            <!--
+            <div class="tier1">
+                <h4>Submitted Assessments</h4>
+                <p class="tier2">You have completed the assessments listed below. Unless Feedback Available displays "n/a" (not applicable), 
+                    feedback will be available at the time shown. If feedback is available for particular submissions, it will be seen under 
+                    "View All Submissions/Scores".</p>
+                <p class="tier2">
+                    <a href="#" onclick="javascript:showDetails()"  id="viewDetailLink" class="noLink">View All Submissions/Scores</a> |
+                    <a href="#" onclick="javascript:hideDetails();" id="hideDetailLink">View Only Recorded Scores</a>
+                </p>
+            </div>
+            <div class="tier2" id="scoredTableContainer"></div>
+            -->
+        </div>
+    </body>
+</html>

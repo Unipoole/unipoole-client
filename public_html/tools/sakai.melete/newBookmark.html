@@ -1,0 +1,74 @@
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <meta http-equiv="Content-Style-Type" content="text/css"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=8" />
+        <title>Add Bookmark</title>
+
+        <link href="../../unipoole/skin/sakai/tool_base.css" type="text/css" rel="stylesheet" media="all"/>
+        <link href="../../unipoole/skin/neo-unisa-fixed/tool.css" type="text/css" rel="stylesheet" media="all"/>
+
+        <link href="skin/rtbc004.css" type="text/css" rel="stylesheet" media="all" />
+        <link href="skin/melete.css" type="text/css" rel="stylesheet" media="all" />
+
+        <script type="text/javascript" language="JavaScript" src="../../unipoole/js/jquery/jquery-1.7.2.js"></script>
+        <script type="text/javascript" language="JavaScript" src="../../unipoole/js/unipoole.utilities.js"></script>
+
+        <script type="text/javascript" language="JavaScript" src="js/melete.addBookmark.js"></script>
+
+    </head>
+    <body>
+        <div>
+            <input id="sectionId" type="hidden" name="sectionId" value="78447016" />
+            <input id="bpfpage" type="hidden" name="bpfpage" value="" />
+            <input id="bpfmodid" type="hidden" name="bpfmodid" value="" />
+            <input id="bpfmodseqno" type="hidden" name="bpfmodseqno" value="" />
+            <table id="addbookmarkerror"></table>
+            <table cellspacing="0" cellpadding="10" width="100%" border="0" align="center">
+                <tr>
+                    <td>
+                        <table cellspacing="1" cellpadding="4" width="100%" border="0">
+                            <tr>
+                                <th height="25" colspan="2">
+                                    Add Bookmark
+                                </th>
+                            </tr>
+                            <tr>
+                                <td class="col1" align="left" valign="top">Title <span class="required">*</span></td>
+                                <td class="col2" align="left" valign="top">
+                                    <input id="title" type="text" name="title" class="formtext" size="45" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="col1" align="left" valign="top">Notes</td>
+                                <td  class="col2" align="left" valign="top">
+                                    <textarea id="notes" name="notes" class="formtext" cols="45" rows="20"></textarea>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="col1" align="left" valign="top">Flag as Last Visited?</td>
+                                <td class="col2" align="left" valign="top">	 
+                                    <input id="flaglastvisited" type="checkbox" name="flaglastvisited" title="flaglastvisited" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" align="center">
+                                    <div class="actionBar" align="left">
+                                        <input id="meleteAddBookmark" type="submit" name="addBookmark" value="Done" accesskey="d" title="Done" class="BottomImgReturn" />
+                                    </div>
+                                </td>
+                            </tr>
+
+                        </table>
+                        <p><span class="required">*</span>&nbsp;Required</p>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </body>
+</html>

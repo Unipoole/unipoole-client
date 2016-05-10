@@ -1,0 +1,57 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>coza.opencollab.unipoole</groupId>
+        <artifactId>unipoole-client</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
+        <relativePath>../../../</relativePath>
+    </parent>
+    <groupId>coza.opencollab.unipoole</groupId>
+    <artifactId>sakai.home</artifactId>
+    <version>1.0.0</version>
+    <packaging>jar</packaging>
+    <name>Unipoole Sakai Home</name>
+    <description>This is the Sakai Home tool for Unipoole.</description>
+    <properties>
+        <tool-description.default-page>home.html</tool-description.default-page>
+        <tool-description.name>home</tool-description.name>
+        <tool-description.label>Home</tool-description.label>
+        <tool-description.heading></tool-description.heading>
+        <tool-description.icon>icon-sakai-motd</tool-description.icon>
+        <tool-description.description>${project.description}</tool-description.description>
+        <tool-description.menu>false</tool-description.menu>
+        <tool-description.home>false</tool-description.home>
+        <tool-description.seq>10</tool-description.seq>
+    </properties>
+    <build>
+        <defaultGoal>assembly:single</defaultGoal>
+        <sourceDirectory></sourceDirectory>
+        <outputDirectory>../../../target</outputDirectory>
+        <plugins>
+            <plugin>
+                <artifactId>maven-clean-plugin</artifactId>
+                <version>2.4.1</version>
+                <configuration>
+                    <excludeDefaultDirectories>true</excludeDefaultDirectories>
+                    <filesets>
+                        <fileset>
+                            <directory>${project.build.outputDirectory}/archive-tmp</directory>
+                        </fileset>
+                    </filesets>
+                </configuration>
+            </plugin>                 
+            <plugin>
+                <groupId>net.alchim31.maven</groupId>
+                <artifactId>yuicompressor-maven-plugin</artifactId>
+                <version>1.3.3</version>
+                <configuration>
+                    <includes>
+                        <include>js/*.js</include>
+                        <include>skin/*.css</include>
+                    </includes>
+                </configuration>
+            </plugin>   
+        </plugins>             
+    </build>
+</project>

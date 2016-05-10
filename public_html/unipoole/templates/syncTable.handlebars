@@ -1,0 +1,17 @@
+  {{#each tools}}
+    <tr>
+        <td style="text-align: left;">{{toolLabel}}</td>
+        <td class="{{{ifElseString syncStatus 'uniSynced' 'uniOutOfSync'}}}"></td>
+        <td><input type="checkbox" {{{ifElseString contentUpload '' 'checked="true"'}}} data-tool='{{toolName}}' data-label='{{toolLabel}}' data-size='{{contentUploadSize}}' id='#uniSyncUp-{{toolName}}' {{{ifElseString contentUpload 'disabled="disabled"' ''}}}/>{{resourceSize false contentUploadSize}}</td>
+        <td><input type="checkbox" {{{ifElseString toolSyncBoth '' 'checked="true"'}}} data-tool='{{toolName}}' data-label='{{toolLabel}}' data-size='{{toolTotalSyncSize}}' id='#uniSyncDown-{{toolName}}' {{{ifElseString toolSyncBoth 'disabled="disabled"' ''}}}/>{{resourceSize false toolTotalSyncSize}}</td>
+    </tr>
+  {{/each}}
+<tr>
+    <td colspan="2"><b>Totals :</b></td>
+    <td id="syncUploadSize">0</td>
+    <td id="syncDownloadSize">0</td>
+</tr>
+<tr>
+    <td colspan="3"><b>Grand Total :</b></td>
+    <td id="syncTotalSize">0</td>
+</tr>

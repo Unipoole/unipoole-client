@@ -1,0 +1,27 @@
+    <tr>
+        <td style="text-align: left;" colspan="4"><h3>Upload</h3></td>
+    </tr>  
+    {{#each upload}}
+    <tr>
+        <td style="text-align: left;">{{toolLabel}}</td>
+        <td >{{resourceSize false  size}}</td>
+        <td title='waiting' data-tool='{{toolName}}-upload-status' class="uniWaiting"></td>
+    </tr>
+  {{/each}}
+    <tr>
+        <td style="text-align: left;" colspan="4"><h3>Download</h3></td>
+    </tr>  
+    {{#each tool}}
+    <tr>
+        <td style="text-align: left;">{{toolLabel}}</td>
+        <td >{{resourceSize false size}}</td>
+        <td title='waiting' data-tool='{{toolName}}-tool-status' class="uniWaiting"></td>
+    </tr>
+  {{/each}}
+  {{#each content}}
+    <tr>
+        <td style="text-align: left;">{{toolLabel}}</td>
+        <td >{{resourceSize false size}}</td>
+        <td title='waiting' data-tool='{{toolName}}-content-status' class="uniWaiting"></td>
+    </tr>
+  {{/each}}

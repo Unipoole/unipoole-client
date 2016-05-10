@@ -1,0 +1,47 @@
+{{!  
+This template builds the event brief description details
+
+@author OpenCollab
+@since 1.0.0
+}}
+<div class="portletBody specialLink">
+    <h3>{{title}}</h3>
+    <table cellspacing="0" class="itemSummary">
+        <tbody>
+            <tr>
+                <th>Start Date</th>
+                <td>{{start}}</td>
+            </tr>
+            <tr>
+                <th>End Date</th>
+                <td>{{end}}</td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>{{description}}</td>
+            </tr>
+            <tr>
+                <th>Frequency</th>
+                <td>{{frequency}}</td>
+            </tr>
+            <tr>
+                <th>Event Type</th>
+                <td>{{type}}</td>
+            </tr>
+            <tr>
+                <th>Site</th>
+                <td>{{site}}</td>
+            </tr>
+            <tr>
+                <th>From Site</th>
+                <td>{{from_site}}</td>
+            </tr>
+    </table>
+</div>
+
+<center><a href="details.html?id={{id}}&iframe={{iframe}}&fromCalendar=true" target='_parent' style="width:50%; padding-center: 5px;">Full details...</a></center>
+
+<div class="itemNav">
+  <a href="#" onclick="navigateBack();" style="width:50%; padding-left: 5px;"><input type="button" value="Back"></a>
+</div>
+

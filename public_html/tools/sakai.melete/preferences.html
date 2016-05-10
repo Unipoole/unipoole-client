@@ -1,0 +1,73 @@
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=8" />
+        <link href="../../unipoole/skin/sakai/tool_base.css" type="text/css" rel="stylesheet" media="all"/>
+        <link href="../../unipoole/skin/neo-unisa-fixed/tool.css" type="text/css" rel="stylesheet" media="all"/>
+        <link href="../../unipoole/skin/treetable/jquery.treetable.css" rel="stylesheet" type="text/css"  media="all"/>
+        <link href="../../unipoole/skin/jqueryUI/jquery-ui.css" type="text/css" rel="stylesheet" media="all" />
+
+        <link href="skin/rtbc004.css" type="text/css" rel="stylesheet" media="all" />
+        <link href="skin/melete.css" type="text/css" rel="stylesheet" media="all" />
+
+        <script type="text/javascript" language="JavaScript" src="../../unipoole/js/sakai/headscripts.js"></script>
+
+        <script type="text/javascript" language="JavaScript" src="../../unipoole/js/jquery/jquery-1.7.2.js"></script>
+        <script type="text/javascript" language="JavaScript" src="../../unipoole/js/unipoole.utilities.js"></script>
+        <script type="text/javascript" language="JavaScript" src="../../unipoole/js/unipoole.variables.js"></script>
+        <script type="text/javascript" language="JavaScript" src="../../unipoole/js/handlebars/handlebars.js"></script>
+        <script type="text/javascript" language="JavaScript" src="../../unipoole/js/jqueryUI/jquery-ui.js"></script>
+        <script type="text/javascript" language="JavaScript" src="../../unipoole/js/unipoole.handlebar.helpers.js"></script>
+        <script type="text/javascript" language="JavaScript" src="../../unipoole/js/moment/moment.min.js"></script>
+        <script type="text/javascript" language="JavaScript" src="../../unipoole/js/treetable/jquery.treetable.js"></script>
+
+        <script type="text/javascript" language="JavaScript" src="js/melete.preferences.js"></script>        
+    </head>
+    <body>
+        <div class='portletBody'>
+            <div>
+                <input id="viewButton" onclick='window.open("melete.html", "_self")' type="submit" name="viewButton" value="View" title="View" class="TopImgViewText"/>
+                <input id="preferencesButton" onclick='window.open("preferences.html", "_self")' type="submit" name="preferencesButton" value="Preferences" title="Preferences" class="TopImgPreference"/>
+            </div>
+            <br/>
+            <div class="meletePortletToolBarMessage">
+                <img src="../../unipoole/image/user1_preferences.gif" alt="" width="16" height="16" align="absbottom" border="0">User preference options...</img>
+            </div>
+            <ul>
+                <li id="successMessage">Your preferences been set successfully.</li>
+            </ul>
+            <table class="maintableCollapseWithNoBorder">
+                <tbody>
+                    <tr>
+                        <td height="20" class="maintabledata5"><span class="bold">Select your view</span></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <label>
+                                                <input id='expandedRadio' type="radio" name="expandPref" value="" /> Expanded</label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <label><input id='collapsedRadio' type="radio" name="expandPref" value="" /> Collapsed</label>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>	
+                        </td>	
+                    </tr>		
+                </tbody>
+            </table>
+        </div>
+    </body>
+</html>

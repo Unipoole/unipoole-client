@@ -1,0 +1,31 @@
+{{!  
+    This template builds the resources tree table html
+
+    @author OpenCollab
+    @since 1.0.0
+}}
+{{#each bookmarks}}
+    <tr class="row1">
+        <td class="col25"><span class="ExtraPaddingClass">     </span>
+            <a id="viewSection" href="moduleSection.html?id={{id}}">
+                <span id="bmtitle">{{title}}</span>
+            </a>
+        </td>
+        <td class="col45wordwrap"><span>{{notes}}</span>
+        </td>
+        <td class="col15">
+            <a id="editBookmarkLink" href="#" onclick="meleteBookmarks.editBookmark({{id}});">
+                <img src="../../unipoole/image/document_edit.gif" alt="" class="AuthImgClass"/>
+                    <span> </span>
+                    <span>edit</span>
+            </a>
+        </td>
+        <td class="col15">
+            <a id="deleteaction" href="#" onclick="meleteBookmarks.showDeletionConfirmation({{id}});">
+                <img id="delgif" src="../../unipoole/image/delete.gif" alt="" class="AuthImgClass"/>
+                <span> </span>
+                <span>delete</span>
+            </a>
+        </td>
+    </tr>
+{{/each}}

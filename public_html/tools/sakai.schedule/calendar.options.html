@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=8" />
+        
+        <link href="../../unipoole/skin/sakai/tool_base.css" type="text/css" rel="stylesheet" media="all"/>
+        <link href="../../unipoole/skin/neo-unisa-fixed/tool.css" type="text/css" rel="stylesheet" media="all"/>
+        
+        <script type="text/javascript" language="JavaScript" src="../../unipoole/js/sakai/headscripts.js"></script>
+        <script type="text/javascript" language="JavaScript" src="../../unipoole/js/jquery/jquery-1.7.2.js"></script>
+        <script type="text/javascript" language="JavaScript" src="../../unipoole/js/unipoole.utilities.js"></script>
+        <script type="text/javascript" language="JavaScript" src="../../unipoole/js/unipoole.variables.js"></script>
+        <script type="text/javascript" language="JavaScript" src="js/calendar.options.js"></script>
+        <script type="text/javascript" language="JavaScript" src="../../unipoole/js/tigra_color_picker/picker.js"></script>
+    </head>
+
+    <body>
+        <h3>Options</h3>
+        <div class ="instruction">Set calendar preferences.</div>
+
+        <h4><b>Calendar display</b></h4>
+        <div class ="instruction">Change your calendar's view.</div>
+        <table class="calendarView"><tbody><tr><td><label for="selectViewMode">View: </label></td><td>
+                        <select id="selectViewMode" name="selectViewMode" size="1">	
+                            <option value="month">Calendar by Month</option>	
+                            <option value="basicWeek">Calendar by Week</option></select></td></tr></tbody></table>
+
+        <h4>Priority events</h4>
+        <div class ="instruction">Define event priorities and priority colors. Calendar will color days with the defined priority color for the highest event priority on that day.</div>
+        <h5><span class="eventTypes">Event types  </span></h5>
+        <table class="highPriorityEvents"><tbody><tr><td><label for="highPriorityEvents">High priority: </label></td><td>
+                        <select id="highPriorityList" name="highPriorityList" size="200"  style="height:50px; width: 200px;">	
+                            <option value="Exam">Exam</option>	
+                            <option value="Deadline">Deadline</option></select></td></tr></tbody></table>
+        <br>
+        <div class="navigation0">
+            <div class="itemNav0">
+                <input id="moveup0" type="submit" value="Move up" onclick="moveItemUpToHighPriorityList();">
+                <input id="movedown0" type="submit" value="Move down" onclick="moveItemDownToMediumPriorityList();">
+            </div>
+        </div>
+        <br>
+
+        <table class="mediumPriorityEvents"><tbody><tr><td><label for="mediumPriorityEvents">Medium priority: </label></td><td>
+                        <select id="mediumPriorityList" name="mediumPriorityList" size="200"  style="height:50px; width: 200px;">	
+                            <option value="Web Assignment">Web Assignment</option>	
+                        </select></td></tr></tbody></table>
+        <br>
+        <div class="navigation1">
+            <div class="itemNav1">
+                <input id="moveup1" type="submit" value="Move up" onclick="moveItemUpToMediumPriorityList();" >
+                <input id ="movedown1" type="submit" value="Move down" onclick="moveItemDownToLowPriorityList();">
+            </div>
+        </div>
+        <br>
+
+        <table class="lowPriorityEvents"><tbody><tr><td><label for="lowPriorityEvents">Low priority: </label></td><td>
+                        <select id="lowPriorityList" name="lowPriorityList" size="200"  style="height:50px; width: 200px;">	
+                            <option value="Class section - Discussion">Class section - Discussion</option>	
+                            <option value="Cancellation" >Cancellation</option>	
+                            <option value="Class section - Lecture">Class section - Lecture</option>	
+                            <option value="Computer Session">Computer Session</option>	
+                            <option value="Academic Calendar">Academic Calendar</option>	
+                            <option value="Activity">Activity</option>	
+                            <option value="Class section - Lab">Class section - Lab</option>	
+                            <option value="Class section - Small Group">Class section - Small Group</option>	
+                            <option value="Quiz ">Quiz </option>	
+                            <option value="Class session">Class session</option>	
+                            <option value="Meeting">Meeting</option>
+                            <option value="Class session">Special event</option>
+                            <option value="Multidisciplinary Conference">Multidisciplinary Conference </option>
+                        </select></td></tr></tbody></table>
+        <br>
+        <h5><span class="eventColors">Colors</span></h5>
+        <table class="highPriorityColors"><tbody><tr><td><label>High priority: </label></td><td>
+                        <input 
+                            value="#00CC33" 
+                            type="text" 
+                            size="20" 
+                            name="highPriorityColor"
+                            id="highPriority" />
+                        <a href="javascript:TCP.popup(document.getElementById('highPriority'))"><img src='images/colors.gif'></a></td></tr><tr><td><label>Medium priority: </label></td><td>
+                        <input 
+                            value="#00FF00" 
+                            type="text" 
+                            size="20" 
+                            name="mediumPriorityColor"
+                            id="mediumPriority" />
+                        <a href="javascript:TCP.popup(document.getElementById('mediumPriority'))"><img src='images/colors.gif'></a></td></tr><tr><td><label>Low priority: </label></td><td>
+                        <input 
+                            value="#FFFF00" 
+                            type="text" 
+                            size="20" 
+                            name="lowPriorityColor"
+                            id="lowPriority" />
+                        <a href="javascript:TCP.popup(document.getElementById('lowPriority'))"><img src='images/colors.gif'></a></td></tr></tbody></table>
+
+        <br>
+        <div class="navigation3">
+            <div class="itemNav3">
+                <input id="updateButton" type="submit" value="Update" onclick="update();">
+                <input id="cancelButton" type="submit" value="Cancel" onclick="cancel();">
+            </div>
+        </div>
+    </body>
+</html>

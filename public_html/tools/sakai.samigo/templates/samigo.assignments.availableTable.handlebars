@@ -1,0 +1,30 @@
+{{!  
+    This template populates the announcements table
+
+    @author OpenCollab
+    @since 1.0.0
+}}
+<table id="availableTable" class="listHier" border="0" cellspacing="0" summary="The assessments listed below are currently available for you to take.">
+    <thead>    
+        <tr>
+            <th id="title">Title</th>
+            <th id="time">Time Limit</th>
+            <th id="date">Due Date/Time</th>
+        </tr>
+    </thead>
+    <tbody>
+    {{#each this}}
+        <tr>
+            <td headers="title">
+                <b>{{title}}</b>
+            </td>
+            <td headers="time">
+                {{time_limit}}
+            </td>
+            <td headers="date">
+                {{displayDate date_due}}
+            </td>
+        </tr>
+    {{/each}}
+    </tbody>
+</table>

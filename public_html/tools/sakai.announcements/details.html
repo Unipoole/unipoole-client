@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <meta http-equiv="Content-Style-Type" content="text/css"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=8" />
+        <title>Announcements</title>
+
+        <link href="../../unipoole/skin/sakai/tool_base.css" type="text/css" rel="stylesheet" media="all"/>
+        <link href="../../unipoole/skin/neo-unisa-fixed/tool.css" type="text/css" rel="stylesheet" media="all"/>
+
+        <script type="text/javascript" language="JavaScript" src="../../unipoole/js/sakai/headscripts.js"></script>
+
+        <script type="text/javascript" language="JavaScript" src="../../unipoole/js/jquery/jquery-1.7.2.js"></script>
+        <script type="text/javascript" language="JavaScript" src="../../unipoole/js/unipoole.utilities.js"></script>
+        <script type="text/javascript" language="JavaScript" src="../../unipoole/js/handlebars/handlebars.js"></script>
+        <script type="text/javascript" language="JavaScript" src="../../unipoole/js/unipoole.handlebar.helpers.js"></script>
+        <script type="text/javascript" language="JavaScript" src="../../unipoole/js/moment/moment.min.js"></script>
+        <script type="text/javascript" language="JavaScript" src="../../unipoole/js/unipoole.variables.js"></script>
+
+        <script type="text/javascript" language="JavaScript" src="js/announcements.details.js"></script>
+
+    </head>
+
+    <body>
+        <div class="portletBody">
+            <div class="navPanel">
+                <div class="itemNav">                    
+                    <input id="previousButton" type="button" class="prev" accesskey="p" value="&lt; Previous"/>
+                    <input id="listButton" type="button" value="Return to List" class="toList" accesskey="l"/>
+                    <input id="nextButton" type="button" value="Next  &gt;"  class="nextDis"/>
+                </div>
+            </div>
+            <h3>
+                Announcement
+            </h3>
+            <br/>
+            <table cellspacing="0" class="itemSummary">
+                <tbody id="detailTable">                    
+                </tbody>
+            </table>
+            <h4>
+                Message
+            </h4>
+        </div>
+    </body>
+</html>

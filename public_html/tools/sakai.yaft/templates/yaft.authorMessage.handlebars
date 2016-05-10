@@ -1,0 +1,36 @@
+{{!  
+    This template builds the resources detail html
+
+    @author OpenCollab
+    @since 1.0.0
+}}
+        <div class="yaft_message">
+            <div style="margin: 5px; overflow: hidden;">
+                <div style="margin-left: 2px; overflow: hidden;">
+                    <div style="float: left;">
+                        <a href="viewDiscussion.html?id={{forum.key}}"
+                            name="{{@key}}"
+                            id="message-{{@key}}">
+                            <span style="font-weight: bold">{{topic}}</span></a>
+                            -
+                        </span>
+                    </div>
+                    
+                    {{#compare attachment_count ">" "0"}}
+                    <div style="float: right;">
+                    <span>Attachments: </span>
+                        {{#each attachments}}
+                        <a title="{{name}}" href="#" onclick="javascript:window.open('data/{{name}}');">
+                            {{{resourceIcon type}}}
+                        </a>
+                        {{/each}}
+                    </div>
+                    {{/compare}}
+                </div>
+                <hr style="clear: left">
+                <div style="clear: left">
+                    {{{content}}}
+                </div>
+            </div>
+        </div>
+    </div>

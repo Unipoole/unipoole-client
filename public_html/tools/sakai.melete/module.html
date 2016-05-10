@@ -1,0 +1,112 @@
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <meta http-equiv="Content-Style-Type" content="text/css"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=8" />
+        <title>Modules</title>
+
+        <link href="../../unipoole/skin/sakai/tool_base.css" type="text/css" rel="stylesheet" media="all"/>
+        <link href="../../unipoole/skin/neo-unisa-fixed/tool.css" type="text/css" rel="stylesheet" media="all"/>
+        <link href="../../unipoole/skin/jqueryUI/jquery-ui.css" type="text/css" rel="stylesheet" media="all" />
+
+        <link href="skin/rtbc004.css" type="text/css" rel="stylesheet" media="all" />
+        <link href="skin/melete.css" type="text/css" rel="stylesheet" media="all" />
+
+        <script type="text/javascript" language="JavaScript" src="../../unipoole/js/sakai/headscripts.js"></script>
+
+        <script type="text/javascript" language="JavaScript" src="../../unipoole/js/jquery/jquery-1.7.2.js"></script>
+        <script type="text/javascript" language="JavaScript" src="../../unipoole/js/unipoole.utilities.js"></script>
+        <script type="text/javascript" language="JavaScript" src="../../unipoole/js/unipoole.variables.js"></script>
+        <script type="text/javascript" language="JavaScript" src="../../unipoole/js/handlebars/handlebars.js"></script>
+        <script type="text/javascript" language="JavaScript" src="../../unipoole/js/unipoole.handlebar.helpers.js"></script>
+        <script type="text/javascript" language="JavaScript" src="../../unipoole/js/moment/moment.min.js"></script>
+
+        <script type="text/javascript" language="JavaScript" src="js/melete.utilities.js"></script>
+        <script type="text/javascript" language="JavaScript" src="js/melete.module.js"></script>     
+
+    </head>
+    <body marginwidth="0" marginheight="0">
+        <div class='portletBody'>
+            <div>
+                <input id="viewButton" onclick='window.open("melete.html", "_self")' type="submit" name="viewButton" value="View" title="View" class="TopImgViewText"/>
+                <input id="preferencesButton" onclick='window.open("preferences.html", "_self")' type="submit" name="preferencesButton" value="Preferences" title="Preferences" class="TopImgPreference"/>
+            </div>
+            <br/>
+            <table class="maintableCollapseWithNoBorder">
+                <!--Page Content-->
+                <tbody><tr>
+                        <td align="center">			
+
+                            <table id="navModuleItems" style=" border-width:medium; border-color: #E2E4E8">
+                                <tbody>
+                                    <tr>
+                                        <td></td>
+                                        <td><span id="seperatorMsg1"> | </span></td>
+                                        <td><a id="TOCitem" href="melete.html" onclick=""><span id="TOCMsg">Table Of Contents </span></a></td>
+                                        <td><span id="seperatorMsg2"> | </span></td>
+                                        <td><a id="nextItem" href="#"><span id="nextItemMsg1">Next</span></a></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>      
+                    <tr>
+                        <td align="right">
+                            <a id="myBookmarksLink" href="bookmarks.html">
+                                <img id="mybook_gif" src="../../../unipoole/image/my-bookmarks.png" alt="" class="AuthImgClass"/>
+                                <span id="mybks">My Bookmarks</span>
+                            </a>				  
+                        </td>
+                    </tr>			               
+                    <tr>
+                        <td>
+                            <table id="moduleContentGrid" border="0" cellpadding="5" width="100%">
+                                <tbody>
+                                    <tr>
+                                        <td class="style6">
+                                            <img id="moduleStatus" src="" alt="" title="" class="AuthImgClass"/>
+                                            <span id="mod_seq" class="bold"></span>
+                                            <span id="moduleTitle" class="bold"></span>
+                                        </td>
+                                        <td class="right">
+                                            <a id='print' title="Print" href="#">
+                                                <img hspace="0" border="0" alt="Print" title="Print" src="../../unipoole/image/printer.png"/>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <table id="moduleContentGrid1" border="0" cellpadding="3" width="97%">
+                                <tbody>
+                                    <tr>
+                                        <td><span id="moduleDescription"></span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><span id="secs">The content sections of this module are as follows:</span>
+                                            <table id="tablesec" class="SectionTableClass" summary="Table contains a list sections. It is two columns wide and each row contains a single section. Column one contains the section title link which opens the section upon clicking. Column two contains the date the section was viewed on." width="98%">
+                                                <thead>
+                                                    <tr>
+                                                        <th class="leftheader" scope="col"></th>
+                                                        <th class="leftheader" scope="col"><span id="viewDtheader">Last Visit</span></th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody id="moduleSectionsBody">
+                                                </tbody>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>              
+                    <tr><td class="maintabledata5">&nbsp;   </td></tr>    
+                </tbody>
+            </table>            
+        </div>
+    </body>
+</html>

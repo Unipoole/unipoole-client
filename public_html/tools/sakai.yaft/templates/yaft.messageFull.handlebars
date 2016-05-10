@@ -1,0 +1,87 @@
+{{!  
+    This template builds the resources detail html
+
+    @author OpenCollab
+    @since 1.0.0
+}}
+<div style="overflow: auto;"
+    id="{{key}}" 
+    data-yaft-parent="{{parent}}" 
+    data-yaft-role="message" 
+    data-yaft-collapsed="false"
+    data-yaft-mini="false">
+    
+    {{#isActiveStudent creator_id}}
+        <div class="yaft_read_wrapper">
+    {{^}}
+        {{#compare read "==" "yes"}}
+            <div class="yaft_read_wrapper">
+        {{^}}
+            <div class="yaft_unread_wrapper">
+        {{/compare}}
+    {{/isActiveStudent}}
+        <div class="yaft_message">
+            <div style="margin: 5px; overflow: hidden;">
+                <a class="profile" href="javascript:;">
+                    <img width="35" src="images/profile.gif" class="yaft_profile_image">
+                </a>
+                <div style="margin-left: 2px; overflow: hidden;">
+                    <div style="float: left;">
+                        <a href="viewDiscussion.html?id={{forum.key}}"
+                            name="{{@key}}"
+                            id="message-{{@key}}">
+                            <span style="font-weight: bold">{{topic}}</span></a>
+                            <br/>
+                            {{#if creator}}
+                            <span>by <a class="profile" href="javascript:;">{{creator}}</a> - <span>
+                            {{/if}}
+                            {{#if creator_name}}
+                            <span>by <a class="profile" href="javascript:;">{{creator_name}}</a> - <span>
+                            {{/if}}
+                            {{displayDate create_date "YYYY MMM DD @ HH:mm"}}</span>
+                        </span>
+                    </div>
+                    
+                    {{#compare attachment_count ">" "0"}}
+                    <div style="float: right;">
+                    <span>Attachments: </span>
+                        {{#each attachments}}
+                        <a title="{{name}}" href="#" onclick="javascript:window.open('data/{{name}}');">
+                            {{{resourceIcon type}}}
+                        </a>
+                        {{/each}}
+                    </div>
+                    {{/compare}}
+                </div>
+                
+                
+                
+                <hr style="clear: left">
+                <div style="clear: left">
+                    {{{content}}}
+                </div>
+                <br />
+                <div>
+                    {{#compare reply_count ">" 0}}
+                        <span><a href="javascript:toggleMessage('{{key}}');" class="yaft_collapse_expand_link">Collapse</a></span>
+                    {{else}}
+                        {{#compare message_count ">" 1}}
+                            <span><a href="javascript:toggleMessage('{{key}}');" class="yaft_collapse_expand_link">Collapse</a></span>
+                        {{/compare}}
+                    {{/compare}}
+                    
+                    {{#isActiveStudent creator_id}}
+                        <span><a id="readLink" href="javascript:yaftEditMessage('{{key}}');">Edit</a></span>
+                    {{^}}
+                        {{#compare read "==" "yes"}}
+                             <span><a id="readLink" href="javascript:yaftMarkAsUnread('{{key}}');">Mark as Unread</a></span>
+                        {{else}}
+                            <span><a id="readLink" href="javascript:yaftMarkAsRead('{{key}}');">Mark as Read</a></span>
+                        {{/compare}}
+                    {{/isActiveStudent}}
+                    <span><a href="replyMessage.html?mid={{key}}&did={{discussion_id}}">Reply</a></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

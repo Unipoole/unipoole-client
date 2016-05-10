@@ -1,0 +1,17 @@
+{{!  
+    This template populates the recent announcement view
+
+    @author OpenCollab
+    @since 1.0.0
+}}
+{{#each this}}
+<br>
+<li class="announcements" style="list-style: none;>
+ <h3 class="textPanelHeader">
+    <a href="details.html?id={{@key}}&fromRecent=true&iframe={{iframeId}}" title="View announcement {{subject}}">{{subject}}</a>
+ </h3>
+   <p class="textPanelFooter">
+     ({{saved_by}} - {{mod_date}})
+  </p>
+</li>
+{{/each}}

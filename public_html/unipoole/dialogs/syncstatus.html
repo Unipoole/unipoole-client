@@ -1,0 +1,22 @@
+<!--
+ Template for the sync status dialog that will be injected into the html pages using it
+ 
+ @author OpenCollab
+ @since 1.0.0
+-->
+<div id="syncStatusDialog" class="uniDialog" title="Synchronization Status"  style="display: none">
+    <form>
+        <table id="uniSyncStatusTable" border="1" width="100%">
+            <thead>
+                <tr>
+                    <th>Process</th>
+                    <th>Size</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody id="syncStatusTableBody">
+            </tbody>
+        </table>
+        <div id="uniSyncCompleted" class="info" hidden>Sync completed. You can now work offline. Any failed tools can be tried again later.</div>
+    </form>
+</div>  

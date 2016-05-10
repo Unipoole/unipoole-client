@@ -1,0 +1,26 @@
+{{!  
+    This template builds the resources detail html
+
+    @author OpenCollab
+    @since 1.0.0
+}}
+<table class="listHier" id="yaft_author_table">
+    <thead>
+        <tr>
+            <th class="yaftSortableTableHeader"><div>Name</div></th>
+            <th class="yaftSortableTableHeader"><div>Number of Posts</div></th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each this}}
+        <tr class="yaftForumRow">
+            {{#if creator_name}}
+                <td><a href="viewAuthorMessages.html?aid={{creator_id}}&did={{discussion_id}}">{{creator_name}}</a></td>
+            {{else}}
+                <td><a href="viewAuthorMessages.html?aid={{creator_id}}&did={{discussion_id}}">{{creator_id}}</a></td>
+            {{/if}}
+            <td>{{messages}}</td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>

@@ -1,0 +1,28 @@
+/* 
+    Document   : melete
+    Created on : 05 Aug 2013, 7:16:14 PM
+    Author     : Samuel Holtzkampf
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+table.treetable span.file {
+  background-image: url(../images/file.png);
+}
+
+table.treetable span.folder {
+  background-image: url(../images/folder.png);
+}
+
+table.treetable tr.collapsed span.indenter a {
+  background-image: url(../../../unipoole/image/expand.gif);
+}
+
+table.treetable tr.expanded span.indenter a {
+  background-image: url(../../../unipoole/image/collapse.gif);
+}
+
+table.lines td {
+    border-bottom: none;
+    border-top: none;
+}

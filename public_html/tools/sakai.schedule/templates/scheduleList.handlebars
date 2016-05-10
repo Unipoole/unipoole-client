@@ -1,0 +1,46 @@
+{{!  
+    This template populates the announcements table
+
+    @author OpenCollab
+    @since 1.0.0
+}}
+<table id="dataTable" class="dataTable listHier lines nolines" border="0" cellspacing="0" summary="">
+<thead>    
+<tr>
+            <th><a>Date</a></th>
+            <th id="date_sort"></th>
+            <th><a>Time</a></th>
+            <th><a>For</a></th>
+            <th><a>Description</a></th>                                  
+        </tr>
+</thead>
+<tbody>
+        {{#each events}}
+        <tr>
+            <td headers="date" style="white-space:nowrap;vertical-align:top">
+                <a href="schedule.html?view=month&date={{start}}">{{displayDate start 'MMM'}}</a>
+                <a href="schedule.html?view=agendaDay&date={{start}}">{{displayDate start 'DD'}}</a>, {{displayDate start 'YYYY'}}                                                                                                                                          </td>
+            </td>
+            <td headers="date_sort">
+                {{start}}
+            </td>
+            <td headers="time">
+                {{displayEventListTime start end 'HH:mm'}}
+                <p style="margin-top: 30px">From Site: "{{#if from_site}}from_site{{else}}site{{/if}}" </p>
+            </td>
+            <td headers="site">
+                {{site}}
+            </td>
+            <td headers="description">
+                <a href='details.html?id={{id}}'>                    
+                    <div>
+                        {{{eventIcon type}}}
+                        <span class="fc-event-title">{{title}}</span>
+                    </div>
+                </a>
+                {{{description}}}
+                
+            </td>
+        </tr>
+        {{/each}}
+    </tbody></table>

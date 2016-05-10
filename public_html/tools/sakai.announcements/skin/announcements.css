@@ -1,0 +1,65 @@
+/* 
+ *  Announcements specific style
+ * @author OpenCollab
+ * @since 1.0.0
+ */
+
+/* Layout of the search, info, paging */
+
+.dataTables_info { 
+    float : right;    
+    clear: right;
+}
+
+.dataTables_length { 
+    float : right;
+    clear: right;
+}
+
+.dataTables_paginate { 
+    float : right;
+    clear: right;
+}
+
+.dataTables_filter { 
+    float : left;
+
+}
+
+/* Table headers and rows */
+
+table.dataTable td {
+    padding: 0;
+}
+
+table.dataTable tr.odd {
+    background-color: white;
+}
+
+table.dataTable tr.even {
+    background-color: white;
+}
+
+table.dataTable tr.even td.sorting_1 {
+    background-color: white;
+}
+
+table.dataTable tr.odd td.sorting_1 {
+    background-color: white;
+}
+
+
+table.dataTable thead th {
+    text-align: left;
+    padding: 3px 18px 3px 13px !important;
+
+}
+
+.sorting_asc {
+    background: url('../../../unipoole/image/sortascending.gif') no-repeat center left, #eeeeee !important; 
+
+}
+
+.sorting_desc {
+    background: url('../../../unipoole/image/sortdescending.gif') no-repeat center left, #eeeeee !important;
+}

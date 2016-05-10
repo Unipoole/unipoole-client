@@ -1,0 +1,53 @@
+{{!  
+    This template populates the announcements table
+
+    @author OpenCollab
+    @since 1.0.0
+}}
+<table id="dataTable" class="listHier" border="0" cellspacing="0" summary="Table contains a list of announcements. It is five columns wide and each row contains a single announcement. Column one indicates if the announcement has an attachment, column two contains the title of the announcement, column three has the name of the author, column four shows the recipient, column five contains the date and time of publication.">
+<thead>    
+<tr>
+            <th id="attach" class="attach">    </th>
+            <th id="subject"><a>Subject</a></th>
+            <th id="author"><a>Saved By</a></th>
+            <th id="date_sort"></th>
+            <th id="date"><a>Modified Date</a></th>
+            <th id="releaseDate_sort"></th>
+            <th id="releaseDate"><a>Beginning Date</a></th>
+            <th id="retractDate_sort"></th>
+            <th id="retractDate"><a>Ending Date</a></th>									
+        </tr>
+</thead>
+<tbody>
+        {{#each this}}
+        <tr>
+            <td headers="attach" class="attach">{{{hasAttachment attachments}}}</td>
+            <td headers="subject">
+                <h4>
+                    <a href="details.html?id={{@key}}" title="View announcement {{subject}}">{{subject}}</a>
+                </h4>	
+            </td>
+            <td headers="author">
+                {{saved_by}}
+            </td>
+            <td headers="date_sort">
+                {{mod_date}}
+            </td>
+            <td headers="date">
+                {{displayDate mod_date}}
+            </td>
+            <td headers="releaseDate_sort">
+                {{begin_date}}
+            </td>
+            <td headers="releaseDate">
+                {{displayDate begin_date}}
+            </td>
+            <td headers="retractDate_sort">
+                {{end_date}}
+            </td>
+            <td headers="retractDate">
+                {{displayDate end_date}}
+            </td>
+        </tr>
+        {{/each}}
+    </tbody></table>

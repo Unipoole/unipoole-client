@@ -1,0 +1,17 @@
+<!--
+ Template for the authorization dialog that will be injected into the html pages using it
+ 
+ @author OpenCollab
+ @since 1.0.0
+-->
+<div id="authenticateDialog" class="uniDialog" title="Login to myUnisa" style="display: none">                        
+    <form>
+        <fieldset class="uniDialog" >
+            <span id='uniAuthErrorMessage' class='uniErrorMessage'></span>
+            <label class="uniDialog" >Student Number</label>
+            <input disabled="disabled" class="uniDialog ui-widget-content ui-corner-all" name="authName" id="authName"/>                               
+            <label class="uniDialog" for="authPassword">Password</label>
+            <input class="uniDialog ui-widget-content ui-corner-all" type="password" name="authPassword" id="authPassword"/>
+        </fieldset>
+    </form>
+</div>

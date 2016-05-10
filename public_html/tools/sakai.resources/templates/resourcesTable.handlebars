@@ -1,0 +1,55 @@
+{{!  
+    This template builds the resources tree table html
+
+    @author OpenCollab
+    @since 1.0.0
+}}
+<table id="resourcesTable" class="listHier lines centerLines" >
+    <thead>
+        <tr>
+            <th style="border:none;width:3%" id="expansion" data-expand='collapsed'>
+		<a id='expandAll' title="Expand All" href="#" onclick="expandCollapse();">
+                    <img hspace="0" border="0" alt="Expand All" title="Expand All" src="../../unipoole/image/expand-collapse.gif">
+		</a>
+                <a id='collapseAll' title="Collapse All" href="#" onclick="expandCollapse();" style='display:none;'>
+                    <img hspace="0" border="0" alt="Collapse All" title="Collapse All" src="../../unipoole/image/collapse-expand.gif">
+		</a>								 
+	    </th>
+            <th style="width:45%">Title</th>
+            <th style="width:5%">Action</th>
+            <th style="width:10%">Access</th>
+            <th style="width:10%">Created By</th>
+            <th style="width:10%">Modified</th>
+            <th style="width:5%">Size</th>
+        </tr>
+    </thead>
+    <tbody>
+    {{#each this}}
+        <tr data-tt-id='{{treeId}}' data-tt-parent-id='{{treeParentId}}'>
+            <td></td>
+            <td class='resourceTitle specialLink'>{{{resourceIcon mime_type}}}
+                {{#if thisIsLink}}
+                    <a target='_blank' href='{{treeId}}'>&nbsp;&nbsp;{{#if title}}{{title}}{{else}}{{name}}{{/if}}</a>
+                {{else}}
+                    <a target='_blank' href='data/{{treeId}}'>&nbsp;&nbsp;{{#if title}}{{title}}{{else}}{{name}}{{/if}}</a>
+                {{/if}}
+            </td>
+            <td>
+
+                <ul class="resourceActionMenu">
+                    <li>
+                      <a href="#">Actions</a>
+                      <ul>
+                        <li><a href="details.html?id={{id}}"><span></span>View Details</a></li>
+                      </ul>
+                    </li>
+                </ul>
+            </td>
+            <td>{{resourceAccess access}}</td>
+            <td>{{createdByDisplayName}}</td>
+            <td>{{displayDate modified_on}}</td>
+            <td>{{resourceSize directory size}}</td>
+        </tr>
+    {{/each}}
+    </tbody>
+</table>

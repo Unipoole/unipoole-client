@@ -1,0 +1,21 @@
+{{!  
+    This template builds the resources tree table html
+
+    @author OpenCollab
+    @since 1.0.0
+}}
+{{#each this}}
+    <tr class="row{{getAltRowId2 @index}}">
+        <td class="SectionTableClassCol1">
+            <span style="width:100%;">
+                <a id="viewmoduleform:tablesec:0:viewSectionEditor" href="moduleSection.html?id={{@key}}" class="{{cssClass}}">
+                    <span id="viewmoduleform:tablesec:0:sec_seq">{{tt_id}} </span>
+                    <span id="viewmoduleform:tablesec:0:sectitleEditor">{{title}}</span>
+                </a>                                                                
+            </span>
+        </td>
+        <td class="SectionTableClassCol2">
+            <span id="viewmoduleform:tablesec:0:viewDt">{{displayDate last_visit}}</span>
+        </td>
+    </tr>
+{{/each}}

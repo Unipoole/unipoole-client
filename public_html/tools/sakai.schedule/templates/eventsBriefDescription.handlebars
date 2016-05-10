@@ -1,0 +1,17 @@
+{{!  
+This template builds the schedule details
+
+@author OpenCollab
+@since 1.0.0
+}}
+
+<h3 class="textPanelHeader">
+    <b>{{header}} {{start}}</b>
+</h3>
+
+{{#each this}}
+<br>
+<h4 class="textPanelFooter">
+    <img border="0" alt="" src={{icon}}>  {{type}} - <a href="#" id={{id}}  class="briefDescr" onclick="getSelectedEventsData(id);" title= "View event details:  {{title}}" >{{title}}</a> ({{site}}) 
+</h4>
+{{/each}}

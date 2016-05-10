@@ -1,0 +1,56 @@
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <meta http-equiv="Content-Style-Type" content="text/css"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=8" />
+        <title>Modules</title>
+
+        <link href="../../unipoole/skin/sakai/tool_base.css" type="text/css" rel="stylesheet" media="all"/>
+        <link href="../../unipoole/skin/neo-unisa-fixed/tool.css" type="text/css" rel="stylesheet" media="all"/>
+        <link href="../../unipoole/skin/treetable/jquery.treetable.css" rel="stylesheet" type="text/css"  media="all"/>
+        <link href="../../unipoole/skin/jqueryUI/jquery-ui.css" type="text/css" rel="stylesheet" media="all" />
+
+        <link href="skin/rtbc004.css" type="text/css" rel="stylesheet" media="all" />
+        <link href="skin/melete.css" type="text/css" rel="stylesheet" media="all" />
+
+        <script type="text/javascript" language="JavaScript" src="../../unipoole/js/sakai/headscripts.js"></script>
+
+        <script type="text/javascript" language="JavaScript" src="../../unipoole/js/jquery/jquery-1.7.2.js"></script>
+        <script type="text/javascript" language="JavaScript" src="../../unipoole/js/unipoole.utilities.js"></script>
+        <script type="text/javascript" language="JavaScript" src="../../unipoole/js/unipoole.variables.js"></script>
+        <script type="text/javascript" language="JavaScript" src="../../unipoole/js/handlebars/handlebars.js"></script>
+        <script type="text/javascript" language="JavaScript" src="../../unipoole/js/jqueryUI/jquery-ui.js"></script>
+        <script type="text/javascript" language="JavaScript" src="../../unipoole/js/unipoole.handlebar.helpers.js"></script>
+        <script type="text/javascript" language="JavaScript" src="../../unipoole/js/moment/moment.min.js"></script>
+        <script type="text/javascript" language="JavaScript" src="../../unipoole/js/treetable/jquery.treetable.js"></script>
+
+        <script type="text/javascript" language="JavaScript" src="js/melete.utilities.js"></script>
+        <script type="text/javascript" language="JavaScript" src="js/melete.js"></script>        
+
+    </head>
+    <body marginwidth="0" marginheight="0">
+        <div class='portletBody'>
+            <br/>
+            <div>
+                <input id="viewButton" onclick='window.open("melete.html", "_self")' type="submit" name="viewButton" value="View" title="View" class="TopImgViewText"/>
+                <input id="preferencesButton" onclick='window.open("preferences.html", "_self")' type="submit" name="preferencesButton" value="Preferences" title="Preferences" class="TopImgPreference"/>
+            </div>
+            <br/>
+            <div align="right">
+                <a id="myBookmarksLink" href="bookmarks.html">
+                    <img id="mybook_gif" src="../../unipoole/image/my-bookmarks.png" alt="" class="BmImgClass"/>
+                    <span id="mybks">My Bookmarks</span>
+                </a>	
+            </div>
+            <div id='moduleTableDiv'>
+
+            </div>
+            <div class="actionBar" align="left">&nbsp;</div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,22 @@
+{{!  
+    This template builds the resources detail html
+
+    @author OpenCollab
+    @since 1.0.0
+}}
+<div class="yaft_message" style="border: solid black 1px;">
+    <div style="margin:5px;overflow:auto;">
+        <img height="35" width="35" src="images/profile.gif" style="float:left;margin-right:2px;">
+        <div style="margin-left:2px;overflow: auto;">
+            <div style="float:left;">
+                <span style="font-weight: bold">{{topic}}</span>
+                <br>
+                <span>by {{creator_name}}</span>
+                -
+                <span>{{displayDate create_date "YYYY MMM DD @ HH:mm"}}</span>
+            </div>
+        </div>
+        <hr style="clear: left">
+        <div style="clear: left">{{{content}}}</div>
+    </div>
+</div>

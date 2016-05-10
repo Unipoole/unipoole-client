@@ -1,0 +1,129 @@
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <meta http-equiv="Content-Style-Type" content="text/css"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=8" />
+        <title>Modules</title>
+
+        <link href="../../unipoole/skin/sakai/tool_base.css" type="text/css" rel="stylesheet" media="all"/>
+        <link href="../../unipoole/skin/neo-unisa-fixed/tool.css" type="text/css" rel="stylesheet" media="all"/>
+        <link href="../../unipoole/skin/jqueryUI/jquery-ui.css" type="text/css" rel="stylesheet" media="all" />
+
+        <link href="skin/rtbc004.css" type="text/css" rel="stylesheet" media="all" />
+        <link href="skin/melete.css" type="text/css" rel="stylesheet" media="all" />
+
+        <script type="text/javascript" language="JavaScript" src="../../unipoole/js/sakai/headscripts.js"></script>
+
+        <script type="text/javascript" language="JavaScript" src="../../unipoole/js/jquery/jquery-1.7.2.js"></script>
+        <script type="text/javascript" language="JavaScript" src="../../unipoole/js/unipoole.utilities.js"></script>
+        <script type="text/javascript" language="JavaScript" src="../../unipoole/js/unipoole.variables.js"></script>
+        <script type="text/javascript" language="JavaScript" src="../../unipoole/js/handlebars/handlebars.js"></script>
+        <script type="text/javascript" language="JavaScript" src="../../unipoole/js/jqueryUI/jquery-ui.js"></script>
+        <script type="text/javascript" language="JavaScript" src="../../unipoole/js/unipoole.handlebar.helpers.js"></script>
+        <script type="text/javascript" language="JavaScript" src="../../unipoole/js/moment/moment.min.js"></script>
+
+        <script type="text/javascript" language="JavaScript" src="js/melete.utilities.js"></script>
+        <script type="text/javascript" language="JavaScript" src="js/melete.section.js"></script>
+
+
+    </head>
+    <body marginwidth="0" marginheight="0">
+        <div class='portletBody'>
+            <div>
+                <input id="viewButton" onclick='window.open("melete.html", "_self")' type="submit" name="viewButton" value="View" title="View" class="TopImgViewText"/>
+                <input id="preferencesButton" onclick='window.open("preferences.html", "_self")' type="submit" name="preferencesButton" value="Preferences" title="Preferences" class="TopImgPreference"/>
+            </div>
+            <br/>
+            <table class="maintableCollapseWithNoBorder">
+                <tbody>
+                    <tr>
+                        <td colspan="2" align="center">
+                            <table id="viewsectionform:topmod:navSectionsItem" style=" border-width:medium; border-color: #E2E4E8">
+                                <tbody>
+                                    <tr>
+                                        <td><a id="prevMod" href="#" onclick="">Prev</span></a>
+                                        </td>
+                                        <td><span id="seperatorMsg1"> | </span>
+                                        </td>
+                                        <td><a id="TOCitem" href="melete.html">Table Of Contents </span></a>
+                                        </td>
+                                        <td><span id="seperatorMsg2"> | </span>
+                                        </td>
+                                        <td><a id="nextItem" href="#" onclick=""><span id="nextMsg">Next</span></a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>	
+                            <table id="crumbsItem" style=" border-width:medium; border-color: #E2E4E8">
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <a id="moduleItem">
+                                                <span id="moduleTitle"></span>
+                                            </a>
+                                            <span id="sep"> » </span>
+                                            <span id="sectionTitle"></span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" align="right">						       
+                            <a id="bookmarkSectionLink" href='#' onclick="meleteUtilities.addBookmark();">
+                                <img id="bul_gif" src="../../../unipoole/image/bookmark-it.png" alt="" class="AuthImgClass"/>
+                                <span id="bookmarktext">Bookmark it!</span>
+                            </a>		
+                                                   						
+                            <a id="myBookmarksLink" href="bookmarks.html">
+                                <img id="mybook_gif" src="../../../unipoole/image/my-bookmarks.png" alt="" class="AuthImgClass"/>
+                                <span id="mybks">My Bookmarks</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" align="left">
+                            <span id="mod_seq" class="bold style6"></span>
+                            <span id="modtitle" class="bold style6"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" align="left">
+                            <span id="section_seq" class="bold style7"></span>
+                            <span id="section_title" class="bold style7"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td id="sectionContent"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" align="center">
+                            <table id="navSectionsItemBottom" style=" border-width:medium; border-color: #E2E4E8">
+                                <tbody>
+                                    <tr>
+                                        <td><a id="prevModBottom" href="#" onclick="">Prev</span></a>
+                                        </td>
+                                        <td><span id="seperatorMsg1Bottom"> | </span>
+                                        </td>
+                                        <td><a id="TOCitemBottom" href="melete.html">Table Of Contents </span></a>
+                                        </td>
+                                        <td><span id="seperatorMsg2Bottom"> | </span>
+                                        </td>
+                                        <td><a id="nextItemBottom" href="#" onclick=""><span id="nextMsgBottom">Next</span></a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>	
+                        </td>
+                    </tr>                    
+                </tbody>
+            </table>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,24 @@
+{{!  
+    This template builds the resources detail html
+
+    @author OpenCollab
+    @since 1.0.0
+}}
+<div 
+    id="{{key}}_link" 
+    class="yaft_message_minimised" 
+    style="display: block;"
+    data-yaft-role="message"
+    data-yaft-mini="true">
+    <a onclick="yaftShowMessage('{{key}}')" title="Click to show the full message" href="#">
+        <span style="font-weight: bold">{{topic}}</span>
+    </a>
+    -
+    <span>
+        by
+        <a class="profile" href="javascript:;">{{creator}}</a>
+    </span>
+    at
+    <span>{{displayDate create_date "YYYY MMM DD @ HH:mm"}}</span>
+    <img id="{{key}}_read" class="messageReadFlag" height="16" width="16" src="/library/image/silk/book_open.png" style="display: none;" title="You've read this message">
+</div>

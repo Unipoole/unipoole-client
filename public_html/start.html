@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=8" />
+        <script type="text/javascript" >
+            var portal = {
+                "locale": "en_ZA",
+                "toggle": {
+                    "allowauto": true,
+                    "tools": true,
+                    "sitenav": false
+                }
+            };
+        </script>
+
+        <title>Unipoole</title>
+
+        <link rel="shortcut icon" href="unipoole/image/favicon.ico" />
+        <link rel="icon" href="unipoole/image/favicon.ico" /> 
+
+        <!--Sakai CSS-->
+        <!--<link href="unipoole/skin/portal/portalstyles.css" type="text/css" rel="stylesheet" media="all" />-->
+        <link href="unipoole/skin/neo-unisa-fixed/portal.css" type="text/css" rel="stylesheet" media="all" />
+        <!--<link href="unipoole/skin/sakai/tool_base.css" type="text/css" rel="stylesheet" media="all" />-->
+        <link href="unipoole/skin/neo-unisa-fixed/tool.css" type="text/css" rel="stylesheet" media="all" />
+
+        <!--Unipoole CSS-->
+        <link href="unipoole/skin/unipoole.css" type="text/css" rel="stylesheet" media="all" />
+        <link href="unipoole/skin/toastr/toastr.css" type="text/css" rel="stylesheet" media="all" />
+        <link href="unipoole/skin/jqueryUI/jquery-ui.css" type="text/css" rel="stylesheet" media="all" />
+
+        <!--Sakai JS-->
+        <script type="text/javascript" src="unipoole/js/sakai/headscripts.js"></script>
+        <script type="text/javascript" src="unipoole/js/jquery/jquery-1.7.2.js"></script>
+        <script type="text/javascript" src="unipoole/js/sakai/trimpath-template-latest.js"></script>
+        <script type="text/javascript" src="unipoole/js/portal/neoscripts.js"></script> 
+        <script type="text/javascript" src="unipoole/js/cluetip/jquery.cluetip.js"></script>
+
+        <!--Plugin JS-->
+        <script type="text/javascript" src="unipoole/js/jqueryUI/jquery-ui.js"></script>
+        <script type="text/javascript" src="unipoole/js/toastr/toastr.js"></script>
+        <script type="text/javascript" src="unipoole/js/moment/moment.min.js"></script>
+        <script type="text/javascript" src="unipoole/js/handlebars/handlebars.js"></script>
+        <script type="text/javascript" src="unipoole/js/unipoole.handlebar.helpers.js"></script>
+
+        <!--Unipoole JS-->
+        <script type="text/javascript" src="unipoole/js/unipoole.utilities.js"></script>
+        <script type="text/javascript" src="unipoole/js/unipoole.message.js"></script>
+        <script type="text/javascript" src="unipoole/js/unipoole.dashboard.js"></script>
+        <script type="text/javascript" src="unipoole/js/unipoole.sync.js"></script>
+        <script type="text/javascript" src="unipoole/js/unipoole.menu.js"></script> 
+        <script type="text/javascript" src="unipoole/js/unipoole.init.js"></script>
+        <script type="text/javascript" src="unipoole/js/unipoole.variables.js"></script>               
+        
+        <script type="text/javascript" src="unipoole/js/unipoole.auth.js"></script>
+
+    </head>
+    <body class="portalBody">
+        <script type="text/javascript">
+            var sakaiPortalWindow = "";
+            $(document).ready(function() {
+                setupSkipNav();
+            });
+        </script>
+        <!-- END Header -->
+        <script type="text/javascript">
+            $(document).ready(function() {
+
+                var toggleClass = ""
+                toggleClass = "toggleTools"
+                setupToolToggle(toggleClass);
+            });
+        </script>
+
+
+        <div id="portalOuterContainer">
+            <div id="portalContainer">
+
+                <div id="headerMin">
+                    <div id="skipNav">
+
+                        <a href="#tocontent"  class="skip internalSkip" title="jump to content" accesskey="c">
+                            jump to content
+                        </a>
+                        <a href="#totoolmenu"  class="skip internalSkip" title="jump to tools list" accesskey="l">
+                            jump to tools list
+                        </a>
+                    </div>
+
+                    <div id="siteNavWrapper">
+                        <div id="mastHead" role="banner">
+                            <div id="mastLogo">
+                                <img title="Logo" alt="Logo" src="unipoole/skin/neo-unisa-fixed/images/logo_inst.gif" />
+
+
+                            </div>
+                            <div id="mastDashboard">
+                                <!-- Dashboard will be updated by script - unipoole.dashboard.js -->
+                                <div id="dashboardNetStatus" class="uniDashboardText connectionOffline"></div>
+                                <div id="dashboardAppSync" onclick="unipooleSync.syncApp();" title="Click to synchronise tools" class="uniDashboardText dashboardOff">Sync Now</div>
+                                <div id='dashBoardUserName'><span id='uniUsername' class="uniDashboardText"><a id='uniRegisterLink' href='#'>Register</a></span></div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="divColor" id="tabBottom">
+                        <span id='moduleCode'></span>
+                    </div>
+                </div>
+
+
+                <!-- START from includePageWithNav.vm -->
+
+                <div id="container"  class="workspace">
+
+                    <!-- START from includePageNav.vm -->
+                    <!-- start includePageNav -->
+                    <div class="divColor" id="toolMenuWrap">
+                        <div id="worksiteLogo">
+                        </div>
+                        <h1 class="skip" id="totoolmenu">Tools list begins here</h1>
+                        <div id="toolMenu" role="navigation" aria-label="Tools list begins here">
+                            <!-- Menu items will be injected here by script - unipoole.menu.js -->
+                        </div>
+
+                    </div>
+                    <div id="togglebar">
+                        <a id="toggleToolMenu" onmouseup="blur()" href="#" title="Minimize tool navigation">
+                            <span id="toggleToolMax" class="" style="display: block;"><em class="skip">Minimize tool navigation</em>&nbsp;</span>
+                            <span id="toggleNormal" style="display: none;" class=""><em class="skip">Expand tool navigation</em>&nbsp;</span>
+                        </a>
+                    </div>
+                    <h1 class="skip" id="tocontent">Content begins here</h1>
+                    <!-- end includePageNav -->
+                    <!-- end page nav -->
+                    <!-- END from includePageNav.vm -->
+
+
+                    <!-- START from includePageBody.vm -->
+                    <div id="content" role="main">
+
+
+                        <div id="col1">
+                            <!-- start Tool -->
+                            <div class="portletTitleWrap" style="display:none;">
+                                <div class="portletTitle">
+                                    <div class="title">
+                                        <a href="#" target="Mainxgatewayx110" title="Reset" id="uniResetTool"></a>
+                                        <h2 id="toolHeading" ></h2>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- end Tool -->
+                            <!-- start Tool Body -->
+                            <div class="portletMainWrap">
+                                <iframe	name="Mainxgatewayx110"
+                                        id="Mainxgatewayx110"
+                                        class ="portletMainIframe"
+                                        height="475"
+                                        width="100%"
+                                        frameborder="0"
+                                        marginwidth="0"
+                                        marginheight="0"
+                                        scrolling="auto"
+                                        src="tools/sakai.home/home.html">
+                                </iframe>
+                            </div>
+                            <!-- end Tool Body -->
+                        </div>
+                    </div>
+
+                    <div>
+                        <!-- include bottom -->
+                        <div class="footerExtNav">
+                            <ul id="footerLinks">
+                                <li><span><a href="http://www.unisa.ac.za/" target="_blank">University of South Africa</a></span></li>
+                                <li><span><a href="http://www.opencollab.co.za/" target="_blank">OpenCollab</a></span></li>
+                                <li><span><a href="http://www.sakaiproject.org/" target="_blank">The Sakai Project</a></span></li>
+                                <li><span><a href="javascript:window.unipooleMessage.showUnipooleAbout();">About</a></span></li>
+                            </ul>
+                        </div>
+                        <div id="footer" role="contentinfo">
+                            <div id="footerInfo">
+                                <a href="http://sakaiproject.org" target="_blank">
+                                    <img src="unipoole/image/sakai_powered.gif" alt="Powered by Sakai" />
+                                    <span class="skip"> (Opens in a new window)</span>
+                                </a>
+                                <!-- end include Bottom -->
+                            </div>
+                            <div class="sakaiCopyrightInfo">Copyright 2003-2011 The Sakai Foundation. All rights reserved. Portions of Sakai are copyrighted by other parties as described in the Acknowledgments screen.</div>
+
+                        </div>
+                        <!-- end includePageBody -->
+                        <!-- END from includePageBody.vm -->
+                        <div id="tutorial"></div>	</div>
+                    <!-- END from includePageWithNav.vm -->
+
+                </div>
+            </div>
+        </div>
+        <!-- end includeSiteNav -->
+        <!-- end site.vm -->
+
+    </body>
+</html>

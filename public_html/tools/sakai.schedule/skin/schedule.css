@@ -1,0 +1,100 @@
+/* 
+    Document   : schedule
+    Created on : 30 Jul 2013, 6:53:34 PM
+    Author     : OpenCollan
+    Description:
+        Schedule tool specific style
+*/
+
+.fc-event {
+    border: 1px solid #BBBBBB;  
+    background-color: #FFFFCC;  
+    color: black;               
+    font-size: 1em;    
+    cursor: default;
+    text-align: left;
+    position: relative;
+    left: 20px
+}
+
+a.fc-event {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.fc-event-inner {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    z-index: 2;
+    padding-left: 20px;
+}
+
+.fc-event{
+    border-style: none;
+}
+
+.fc-day-number{
+    position: relative;
+}
+
+.fc-day-content{
+    font-size: 9px;
+    top: 0px;
+    right: 0px;
+}
+
+.activity {
+    background: url(../../../unipoole/image/activity.gif) no-repeat left top;
+}
+
+.deadline {
+    background: url(../../../unipoole/image/deadline.gif) no-repeat left top;
+}
+
+#calendar {
+    padding-top: 10px;    
+}
+
+/* Table headers and rows */
+
+table.dataTable td {
+    padding: 0;
+}
+
+table.dataTable tr.odd {
+    background-color: white;
+}
+
+table.dataTable tr.even {
+    background-color: white;
+}
+
+table.dataTable tr.even td.sorting_1 {
+    background-color: white;
+}
+
+table.dataTable tr.odd td.sorting_1 {
+    background-color: white;
+}
+
+
+table.dataTable thead th {
+    text-align: left;
+    padding: 3px 18px 3px 13px !important;
+
+}
+
+.sorting_asc {
+    background: url('../../../unipoole/image/sortascending.gif') no-repeat center left, #eeeeee !important; 
+
+}
+
+.sorting_desc {
+    background: url('../../../unipoole/image/sortdescending.gif') no-repeat center left, #eeeeee !important;
+}
+
+.fc-event-time {
+    display:none;
+}

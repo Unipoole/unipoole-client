@@ -1,0 +1,58 @@
+{{!  
+    This template builds the resources detail html
+
+    @author OpenCollab
+    @since 1.0.0
+}}
+<div class="portletBody specialLink">
+    <h3>Properties</h3>
+    <table cellspacing="0" class="itemSummary">
+        <tbody>
+            <tr>
+                <th>Title</th>
+                <td>{{name}}</td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>{{description}}</td>
+            </tr>
+            <tr>
+                <th>Access</th>
+                <td>{{resourceAccess access}}</td>
+            </tr>
+            <tr>
+                <th>Created By</th>
+                <td>{{createdByDisplayName}}</td>
+            </tr>
+            <tr>
+                <th>Created Time</th>
+                <td>{{displayDate created_on}}</td>
+            </tr>
+            <tr>
+                <th>Last Modified Time</th>
+                <td>{{displayDate modified_on}}</td>
+            </tr>
+            <tr>
+                <th>Last Modified By</th>
+                <td>{{lastmodifiedByDisplayName}}</td>
+            </tr>            
+            <tr>
+                <th>Size</th>
+                <td>{{resourceSize type size}}</td>
+            </tr>
+            <tr>
+                <th>URL</th>
+                <td>
+                    {{#if thisIsLink}}
+                    <a target='_blank' href='{{treeId}}'>{{treeId}}</a>
+                    {{else}}
+                    <a target='_blank' href='data/{{treeId}}'>{{treeId}}</a>
+                    {{/if}}
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <p class="act">
+        <input type="submit" accesskey="x" value="Return" onclick="window.open('resources.html', '_self');">
+    </p> 
+</div>

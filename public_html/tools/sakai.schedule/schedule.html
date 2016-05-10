@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Schedule</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=8" />
+        
+        <link href="/unipoole/skin/sakai/tool_base.css" type="text/css" rel="stylesheet" media="all"/>
+        <link href="/unipoole/skin/neo-unisa-fixed/tool.css" type="text/css" rel="stylesheet" media="all"/>
+        <link href="/unipoole/skin/fullcalendar/fullcalendar.css" rel="stylesheet" type="text/css"  media="all"/>
+        <link href="/unipoole/skin/jqueryUI/jquery-ui.css" type="text/css" rel="stylesheet" media="all" />
+        
+        <link href="skin/schedule.css" type="text/css" rel="stylesheet" media="all"/>
+
+        <script type="text/javascript" language="JavaScript" src="/unipoole/js/sakai/headscripts.js"></script>
+
+        <script type="text/javascript" language="JavaScript" src="/unipoole/js/jquery/jquery-1.7.2.js"></script>
+        <script type="text/javascript" language="JavaScript" src="/unipoole/js/unipoole.utilities.js"></script>
+        <script type="text/javascript" language="JavaScript" src="/unipoole/js/unipoole.variables.js"></script>
+        <script type="text/javascript" language="JavaScript" src="/unipoole/js/handlebars/handlebars.js"></script>
+        <script type="text/javascript" language="JavaScript" src="/unipoole/js/jqueryUI/jquery-ui.js"></script>
+        <script type="text/javascript" language="JavaScript" src="/unipoole/js/fullcalendar/fullcalendar.js"></script>
+        <script type="text/javascript" language="JavaScript" src="/unipoole/js/moment/moment.min.js"></script>
+        
+        <script type="text/javascript" language="JavaScript" src="js/schedule.utils.js"></script>
+        <script type="text/javascript" language="JavaScript" src="js/schedule.js"></script>
+    </head>
+    
+    <body>
+        <div>
+            <div id='calendar' class="calendar"></div>
+            <table cellpadding="3" summary="List of event types in the calendar" class="listHier" style="margin-right:auto;margin-left:auto;margin-top:1em;width:80%">
+                <tbody><tr><th style="text-align:center" colspan="3">Legend</th></tr>
+                    <tr>
+                        <td><img border="0" alt="" src="../../unipoole/image/academic_calendar.gif"> Academic Calendar</td>
+                        <td><img border="0" alt="" src="../../unipoole/image/activity.gif"> Activity</td>
+                        <td><img border="0" alt="" src="../../unipoole/image/cancelled.gif"> Cancellation</td>
+                    </tr>
+                    <tr>
+                        <td><img border="0" alt="" src="../../unipoole/image/class_dis.gif"> Class section - Discussion</td>
+                        <td><img border="0" alt="" src="../../unipoole/image/class_lab.gif"> Class section - Lab</td>
+                        <td><img border="0" alt="" src="../../unipoole/image/class_lec.gif"> Class section - Lecture</td>
+                    </tr>
+                    <tr>
+                        <td><img border="0" alt="" src="../../unipoole/image/class_sma.gif"> Class section - Small Group </td>
+                        <td><img border="0" alt="" src="../../unipoole/image/class_session.gif"> Class session </td>
+                        <td><img border="0" alt="" src="../../unipoole/image/computersession.gif"> Computer Session </td>
+                    </tr>
+                    <tr>
+                        <td><img border="0" alt="" src="../../unipoole/image/deadline.gif"> Deadline </td>
+                        <td><img border="0" alt="" src="../../unipoole/image/accept.png"> Exam </td>
+                        <td><img border="0" alt="" src="../../unipoole/image/meeting.gif"> Meeting</td>
+                    </tr>
+                    <tr>
+                        <td><img border="0" alt="" src="../../unipoole/image/multi-conference.gif"> Multidisciplinary Conference </td>
+                        <td><img border="0" alt="" src="../../unipoole/image/star.png"> Quiz </td>
+                        <td><img border="0" alt="" src="../../unipoole/image/special_event.gif"> Special event </td>
+                    </tr>
+                    <tr>
+                        <td><img border="0" alt="" src="../../unipoole/image/webassignment.gif"> Web Assignment </td>  
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody></table>
+        </div>
+    </body>
+</html>

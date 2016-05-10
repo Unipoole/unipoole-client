@@ -1,0 +1,11 @@
+<ul>
+  {{#each menus}}
+  <li>
+      <a class="toolMenuLink " onclick="unipooleMenu.loadMenuItem(this, 'tools/{{tool}}/{{defaultPage}}', '{{heading}}');return false;"
+          title="{{description}}" href="">          
+          <span class="toolMenuIcon {{icon}}">{{label}}</span>
+          <span class="{{{ifElseString synced 'uniMenuSynced' 'uniMenuUnsynced'}}}"></span>
+      </a>
+  </li>
+  {{/each}}
+</ul>

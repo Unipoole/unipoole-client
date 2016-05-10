@@ -1,0 +1,15 @@
+{
+    "version": "${project.version}",
+    "name": "${project.artifactId}",
+    "toolDescription": {
+        "defaultPage": "${tool-description.default-page}",
+        "name": "${tool-description.name}",
+        "label": "${tool-description.label}",
+        "heading": "${tool-description.heading}",
+        "icon": "${tool-description.icon}",
+        "description": "${tool-description.description}",
+        "menu": ${tool-description.menu},
+        "home": ${tool-description.home},
+        "seq": "${tool-description.seq}"
+    }
+}

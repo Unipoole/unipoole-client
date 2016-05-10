@@ -1,0 +1,30 @@
+{{!  
+This builds the faq tree html
+
+@author OpenCollab
+@since 1.0.0
+}}
+<p class="instruction"> Click on a Category to view a list of FAQs or the specific FAQ to view the details.</p>
+<table id="faqTable" class="listHier" >
+    <thead>
+        <tr>
+            <th width="80%">Title</th>
+            <th>Modified</th>
+        </tr>
+    </thead>
+    <tbody>        
+        {{#each this}}
+        {{#if isParent}}
+        <tr data-tt-id='{{id}}'>
+            <td><a href="#" ><b>{{description}}</b></a></td>
+            <td>{{displayDate modifiedOn}}</td>
+        </tr>
+        {{else}}
+        <tr data-tt-id='{{id}}' data-tt-parent-id='{{parentId}}'>
+            <td><a href="details.html?content_id={{id}}&category_id={{parentId}}" >{{question}}</a></td>
+            <td>{{displayDate modifiedOn}}</td>
+        </tr>
+        {{/if}}
+        {{/each}}
+    </tbody>
+</table>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Schedule</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=8" />
+
+        <link href="../../unipoole/skin/sakai/tool_base.css" type="text/css" rel="stylesheet" media="all"/>
+        <link href="../../unipoole/skin/neo-unisa-fixed/tool.css" type="text/css" rel="stylesheet" media="all"/>
+        <link href="../../unipoole/skin/fullcalendar/fullcalendar.css" rel="stylesheet" type="text/css"  media="all"/>
+        <link href="../../unipoole/skin/jqueryUI/jquery-ui.css" type="text/css" rel="stylesheet" media="all" />
+
+        <link href="skin/schedule.css" type="text/css" rel="stylesheet" media="all"/>
+
+        <script type="text/javascript" language="JavaScript" src="../../unipoole/js/sakai/headscripts.js"></script>
+
+        <script type="text/javascript" language="JavaScript" src="../../unipoole/js/jquery/jquery-1.7.2.js"></script>
+        <script type="text/javascript" language="JavaScript" src="../../unipoole/js/unipoole.utilities.js"></script>
+        <script type="text/javascript" language="JavaScript" src="../../unipoole/js/unipoole.variables.js"></script>
+        <script type="text/javascript" language="JavaScript" src="../../unipoole/js/handlebars/handlebars.js"></script>
+        <script type="text/javascript" language="JavaScript" src="../../unipoole/js/jqueryUI/jquery-ui.js"></script>
+        <script type="text/javascript" language="JavaScript" src="../../unipoole/js/fullcalendar/fullcalendar.js"></script>
+        <script type="text/javascript" language="JavaScript" src="../../unipoole/js/moment/moment.min.js"></script>
+
+        <script type="text/javascript" language="JavaScript" src="js/schedule.utils.js"></script>
+        <script type="text/javascript" language="JavaScript" src="js/calendar.js"></script>
+
+    </head>
+
+    <body>
+        <br>
+        <input id="optionButton" type="submit" value=Options onclick="window.open('calendar.options.html?iframe=' + unipooleUtils.getURLParameter('iframe'), '_self')" >
+        <div id="eventOptions" style="width:50%; padding-left: 5px;"></div>
+        <div>
+            <div id='calendar' class="calendar"></div>
+        </div>
+        <div id="eventsBriefDesc" style="width:80%; padding-left: 5px;"></div>
+        <div id="eventsBriefDetails" style="width:80%; padding-left: 5px;"></div>
+    </body>
+</html>

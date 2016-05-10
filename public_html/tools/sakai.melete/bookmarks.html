@@ -1,0 +1,109 @@
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <meta http-equiv="Content-Style-Type" content="text/css"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=8" />
+        <title>Modules</title>
+
+        <link href="../../unipoole/skin/sakai/tool_base.css" type="text/css" rel="stylesheet" media="all"/>
+        <link href="../../unipoole/skin/neo-unisa-fixed/tool.css" type="text/css" rel="stylesheet" media="all"/>
+        <link href="../../unipoole/skin/treetable/jquery.treetable.css" rel="stylesheet" type="text/css"  media="all"/>
+        <link href="../../unipoole/skin/jqueryUI/jquery-ui.css" type="text/css" rel="stylesheet" media="all" />
+
+        <link href="skin/rtbc004.css" type="text/css" rel="stylesheet" media="all" />
+        <link href="skin/melete.css" type="text/css" rel="stylesheet" media="all" />
+
+        <script type="text/javascript" language="JavaScript" src="../../unipoole/js/sakai/headscripts.js"></script>
+
+        <script type="text/javascript" language="JavaScript" src="../../unipoole/js/jquery/jquery-1.7.2.js"></script>
+        <script type="text/javascript" language="JavaScript" src="../../unipoole/js/unipoole.utilities.js"></script>
+        <script type="text/javascript" language="JavaScript" src="../../unipoole/js/unipoole.variables.js"></script>
+        <script type="text/javascript" language="JavaScript" src="../../unipoole/js/handlebars/handlebars.js"></script>
+        <script type="text/javascript" language="JavaScript" src="../../unipoole/js/jqueryUI/jquery-ui.js"></script>
+        <script type="text/javascript" language="JavaScript" src="../../unipoole/js/unipoole.handlebar.helpers.js"></script>
+        <script type="text/javascript" language="JavaScript" src="../../unipoole/js/moment/moment.min.js"></script>
+        <script type="text/javascript" language="JavaScript" src="../../unipoole/js/treetable/jquery.treetable.js"></script>
+
+        <script type="text/javascript" language="JavaScript" src="js/melete.bookmarks.js"></script>
+
+
+    </head>
+    <body marginwidth="0" marginheight="0">
+        <br/>
+        <div>
+            <input id="viewButton" onclick='window.open("melete.html", "_self")' type="submit" name="viewButton" value="View" title="View" class="TopImgViewText"/>
+            <input id="preferencesButton" onclick='window.open("preferences.html", "_self")' type="submit" name="preferencesButton" value="Preferences" title="Preferences" class="TopImgPreference"/>
+        </div>
+
+        <div class='portletBody' id="bookmarkList">
+            <div class="meletePortletToolBarMessage">
+                <img src="../../unipoole/image/my-bookmarks.png" alt="" width="16" height="16" align="absbottom" border="0">My Bookmarks</img>
+            </div>
+            <!--            <div class="right">                
+                            <a id="exportNotesLink" href="#" class="AuthImgClass">
+                                <img id="image0" src="../../unipoole/image/export.png" alt="" class="AuthImgClass"/>
+                                <span id="exportnotes">Export Notes</span>
+                            </a>
+                        </div>-->
+            <table id="bookmarksTable" border="0" width="100%">
+                <thead>
+                    <tr>
+                        <th class="tableheader2" scope="col">Title</th>
+                        <th class="tableheader2" scope="col"><span>Notes</span></th>
+                        <th class="tableheader2" scope="col"></th>
+                        <th class="tableheader2" scope="col"></th>
+                    </tr>
+                </thead>
+                <tbody id='bookmarksTableBody'>
+                </tbody>
+            </table>
+            <div class="actionBar" align="left">				
+                <input id="returnButton" onclick='window.open("melete.html", "_self");' type="submit" name="returnButton" value="Return" accesskey="r" tabindex="" title="Return [Access Key + r]" class="BottomImgReturn"/>
+            </div>
+        </div>
+
+        <div class="meletePortletToolBarMessage" id="warningMessage"><img src="images/warning.gif" width="16" height="16" align="absbottom" border="0"/>
+            Bookmark Deletion Warning</div>
+
+        <table id="bookmarkDeletionConfirmationTable" width="100%">
+            <tbody><tr>       
+                    <td width="100%" valign="top">
+                        <table class="maintableCollapseWithBorder">
+                            <tbody><tr><td width="100%" height="20" class="maintabledata5"></td></tr>
+                                <tr> 
+                                    <td width="100%" valign="top">
+                                        <table id="deleteBookmarkError"></table>
+                                        <table class="deleteConfirmTable">
+                                            <tbody><tr>
+                                                    <td> <img src="images/warning.gif" border="0" height="30px"/>
+                                                    </td>
+                                                    <td> 
+                                                        You are about to delete bookmark for:
+                                                        <br> </br>    			
+                                                        <span class="bold" id="bookmarkTitle"></span>
+                                                        <br> </br>    
+                                                        This action cannot be undone! Click on 
+                                                        <span class="bold">Continue</span>
+                                                        to proceed with the deletion or 
+                                                        <span class="bold">Cancel </span>
+                                                        to exit and return to the list of bookmarks.
+                                                    </td>
+                                                </tr>
+                                            </tbody></table>
+                                    </td></tr>
+                                <tr>
+                                    <td>         
+                                        <div class="actionBar" align="left">	
+                                            <input id="delButton" type="submit" name="delButton" value="Continue" onclick="meleteBookmarks.confirmDeletion();" accesskey="c" title="Continue [Access Key + c]"/>			
+                                            <input id="cancelButton" type="submit" name="cancelButton" value="Cancel" onclick="meleteBookmarks.cancelDeletion();" accesskey="x" title="Cancel [Access Key + x]"/>
+                                        </div></td>
+                                </tr>			 
+                            </tbody></table>
+                    </td></tr></tbody></table>
+    </body>
+</html>

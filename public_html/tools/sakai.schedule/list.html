@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Schedule</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=8" />
+
+        <link href="../../unipoole/skin/sakai/tool_base.css" type="text/css" rel="stylesheet" media="all"/>
+        <link href="../../unipoole/skin/neo-unisa-fixed/tool.css" type="text/css" rel="stylesheet" media="all"/>
+        <link href="../../unipoole/skin/fullcalendar/fullcalendar.css" rel="stylesheet" type="text/css"  media="all"/>
+        <link href="../../unipoole/skin/jqueryUI/jquery-ui.css" type="text/css" rel="stylesheet" media="all" />
+        <link href="../../unipoole/skin/datatables/jquery.dataTables.css" type="text/css" rel="stylesheet" media="all" />
+
+        <link href="skin/schedule.css" type="text/css" rel="stylesheet" media="all"/>
+
+        <script type="text/javascript" language="JavaScript" src="../../unipoole/js/sakai/headscripts.js"></script>
+
+        <script type="text/javascript" language="JavaScript" src="../../unipoole/js/jquery/jquery-1.7.2.js"></script>
+        <script type="text/javascript" language="JavaScript" src="../../unipoole/js/unipoole.utilities.js"></script>
+        <script type="text/javascript" language="JavaScript" src="../../unipoole/js/unipoole.variables.js"></script>
+        <script type="text/javascript" language="JavaScript" src="../../unipoole/js/handlebars/handlebars.js"></script>
+        <script type="text/javascript" language="JavaScript" src="../../unipoole/js/unipoole.handlebar.helpers.js"></script>
+        <script type="text/javascript" language="JavaScript" src="../../unipoole/js/jqueryUI/jquery-ui.js"></script>
+        <script type="text/javascript" language="JavaScript" src="../../unipoole/js/moment/moment.min.js"></script>
+        <script type="text/javascript" language="JavaScript" src="../../unipoole/js/datatables/jquery.dataTables.js"></script>
+
+        <script type="text/javascript" language="JavaScript" src="js/schedule.utils.js"></script>
+        <script type="text/javascript" language="JavaScript" src="js/schedule.list.js"></script>
+    </head>
+
+    <body>
+        <div class="portletBody">
+            <div class="navPanel">
+                <div class="viewNav">
+                    <div class="shorttext">
+                        <input type="submit" value="Month View" onclick="window.open('schedule.html?view=month', '_self');">
+                        <input type="submit" value="Week View" onclick="window.open('schedule.html?view=agendaWeek', '_self');">
+                        <input type="submit" value="Day View" onclick="window.open('schedule.html?view=agendaDay', '_self');">
+                    </div>	
+                    <div class="shorttext">                        
+                        <label for="timeFilterOption">Show</label>
+                        <select id="timeFilterOption" name="timeFilterOption">
+                            <option value="SHOW_ALL">All events</option>
+                            <option value="SHOW_DAY">Events for today</option>
+                            <option value="SHOW_WEEK">Events for this week</option>
+                            <option value="SHOW_MONTH">Events for this month</option>
+                            <option value="SHOW_YEAR">Events for this year</option>
+                            <option selected="selected" value="SHOW_CUSTOM_RANGE">Custom date range</option>
+                        </select>
+                    </div>
+                    <div id='dateRangeDiv'>
+                        <div class="shorttext" id="startRange">
+                            <label for="from">Start : </label>
+                            <input type="text" id="from" name="from" />                        
+                        </div>	
+                        <div class="shorttext" id="endRange">
+                            <label for="to">End : </label>
+                            <input type="text" id="to" name="to" />
+                        </div>
+                        <input type="submit" value="Filter Events" id="filterList">
+                    </div>
+                </div>
+                <div id="dataTable_wrapper"></div>
+            </div>  
+            <table cellpadding="3" summary="List of event types in the calendar" class="listHier" style="margin-right:auto;margin-left:auto;margin-top:1em;width:80%">
+                <tbody><tr><th style="text-align:center" colspan="3">Legend</th></tr>
+                    <tr>
+                        <td><img border="0" alt="" src="../../unipoole/image/academic_calendar.gif"> Academic Calendar</td>
+                        <td><img border="0" alt="" src="../../unipoole/image/activity.gif"> Activity</td>
+                        <td><img border="0" alt="" src="../../unipoole/image/cancelled.gif"> Cancellation</td>
+                    </tr>
+                    <tr>
+                        <td><img border="0" alt="" src="../../unipoole/image/class_dis.gif"> Class section - Discussion</td>
+                        <td><img border="0" alt="" src="../../unipoole/image/class_lab.gif"> Class section - Lab</td>
+                        <td><img border="0" alt="" src="../../unipoole/image/class_lec.gif"> Class section - Lecture</td>
+                    </tr>
+                    <tr>
+                        <td><img border="0" alt="" src="../../unipoole/image/class_sma.gif"> Class section - Small Group </td>
+                        <td><img border="0" alt="" src="../../unipoole/image/class_session.gif"> Class session </td>
+                        <td><img border="0" alt="" src="../../unipoole/image/computersession.gif"> Computer Session </td>
+                    </tr>
+                    <tr>
+                        <td><img border="0" alt="" src="../../unipoole/image/deadline.gif"> Deadline </td>
+                        <td><img border="0" alt="" src="../../unipoole/image/accept.png"> Exam </td>
+                        <td><img border="0" alt="" src="../../unipoole/image/meeting.gif"> Meeting</td>
+                    </tr>
+                    <tr>
+                        <td><img border="0" alt="" src="../../unipoole/image/multi-conference.gif"> Multidisciplinary Conference </td>
+                        <td><img border="0" alt="" src="../../unipoole/image/star.png"> Quiz </td>
+                        <td><img border="0" alt="" src="../../unipoole/image/special_event.gif"> Special event </td>
+                    </tr>
+                    <tr>
+                        <td><img border="0" alt="" src="../../unipoole/image/webassignment.gif"> Web Assignment </td>  
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody></table>            
+        </div>
+    </body>
+</html>

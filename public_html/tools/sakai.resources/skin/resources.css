@@ -1,0 +1,12 @@
+table.treetable span.indenter a {
+    background-position: left center;
+    background-repeat: no-repeat;
+    display: inline-block;
+    text-decoration: none;
+    width: 22px;
+    height: 18px;
+}
+
+.ui-menu {
+    width: 110px;
+}

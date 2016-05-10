@@ -1,0 +1,62 @@
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <meta http-equiv="Content-Style-Type" content="text/css"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=8" />
+        <title>Discussions</title>
+
+        <link href="../../unipoole/skin/sakai/tool_base.css" type="text/css" rel="stylesheet" media="all"/>
+        <link href="../../unipoole/skin/neo-unisa-fixed/tool.css" type="text/css" rel="stylesheet" media="all"/>
+        <link href="../../unipoole/skin/datatables/jquery.dataTables.css" type="text/css" rel="stylesheet" media="all"/>
+        <link href="../../unipoole/skin/jqueryUI/jquery-ui.css" type="text/css" rel="stylesheet" media="all"/>
+        <link href="../../unipoole/skin/unipoole.css" type="text/css" rel="stylesheet" media="all"/>
+
+        <link href="skin/yaft.css" type="text/css" rel="stylesheet" media="all"/>
+
+        <script type="text/javascript" language="JavaScript" src="../../unipoole/js/sakai/headscripts.js"></script>
+
+        <script type="text/javascript" language="JavaScript" src="../../unipoole/js/jquery/jquery-1.7.2.js"></script>
+        <script type="text/javascript" language="JavaScript" src="../../unipoole/js/jqueryUI/jquery-ui.js"></script>
+        <script type="text/javascript" language="JavaScript" src="../../unipoole/js/unipoole.utilities.js"></script>
+        <script type="text/javascript" language="JavaScript" src="../../unipoole/js/handlebars/handlebars.js"></script>
+        <script type="text/javascript" language="JavaScript" src="../../unipoole/js/unipoole.handlebar.helpers.js"></script>
+        <script type="text/javascript" language="JavaScript" src="../../unipoole/js/moment/moment.min.js"></script>
+        <script type="text/javascript" language="JavaScript" src="../../unipoole/js/datatables/jquery.dataTables.js"></script>
+        <script type="text/javascript" language="JavaScript" src="../../unipoole/js/unipoole.variables.js"></script>
+        <script type="text/javascript" language="JavaScript" src="../../unipoole/js/unipoole.message.js"></script>
+
+        <script type="text/javascript" language="JavaScript" src="js/YaftHelper.js"></script>
+        <script type="text/javascript" language="JavaScript" src="js/yaft.viewAuthorMessages.js"></script>
+
+
+    </head>
+    <body marginwidth="0" marginheight="0">
+        <div class="portletBody">
+        <ul role="menu" class="navIntraTool actionToolBar" id="yaft_toolbar">    
+            <li role="menuitem" id="yaft_home_link"><span class="firstToolBarItem"><a href="yaft.html" title="Return to the start page">Home</a></span></li>
+            <li id="yaft_authors_view_link" role="menuitem" style="display: inline;"><span><a href="javascript:;" title="Click to view a list of the people in this site who have posted messages">Authors</a></span></li>
+        </ul>
+            <br />
+            <div id="yaft_container">
+                <div id="yaft_breadcrumb"><a href="yaft.html">Forums</a> -&gt; <a id="forumTitle"></a> -&gt; <a id="discussionTitle"></a> -&gt; <a id="authorsLink">Authors</a> -&gt; <span id="authorName"></span></div>
+            </div>
+            <br />
+            <br />
+            <div id="yaft_author_nav_buttons">
+			<span>Messages by <b id="authorName"></b> </span>
+			<input id="yaft_previous_author_button" align="right" type="button" title="View the previous author's messages." value="« Previous">
+			<input id="yaft_next_author_button" align="right" type="button" title="View the next author's messages." value="Next »">
+			</div>
+            <div id="yaft_content" >
+            <div id="messages">
+            
+            </div>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,34 @@
+<!--
+ Template for the sync dialog that will be injected into the html pages using it
+ 
+ @author OpenCollab
+ @since 1.0.0
+-->
+<div id="syncDialog" class="uniDialog" title="Synchronization" style="display: none">
+    <form>
+        <table id="syncTable" border="1">
+            <thead>
+                <tr>
+                    <th style="width:30%">Tool</th>
+                    <th style="width:10%">Status</th>
+                    <th style="width:30%" title="Click to select/deselect all" class="uniSelectMouse" 
+                        id ="uniSyncUp" onclick="unipooleSync.syncHeaderClicked('uniSyncUp');">
+                        Upload My Changes
+                    </th>
+                    <th style="width:30%" title="Click to select/deselect all" class="uniSelectMouse" 
+                        id ="uniSyncDown" onclick="unipooleSync.syncHeaderClicked('uniSyncDown');">
+                        Download New Content
+                    </th>
+                </tr>
+            </thead>
+            <tbody id="syncDialogTableBody">
+            </tbody>
+        </table>
+    </form>
+    <fieldset>
+        <legend>Status</legend>
+        <img src="unipoole/skin/images/online.png" alt="In Sync" title="In Sync"/>  In Sync
+        <br>
+        <img src="unipoole/skin/images/offline.png" alt="Out of sync" title="Out of sync"/> Out of sync
+    </fieldset>
+</div>

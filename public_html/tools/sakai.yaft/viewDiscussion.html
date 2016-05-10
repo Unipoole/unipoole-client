@@ -1,0 +1,66 @@
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <meta http-equiv="Content-Style-Type" content="text/css"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=8" />
+        <title>Discussions</title>
+
+        <link href="../../unipoole/skin/sakai/tool_base.css" type="text/css" rel="stylesheet" media="all"/>
+        <link href="../../unipoole/skin/neo-unisa-fixed/tool.css" type="text/css" rel="stylesheet" media="all"/>
+        <link href="../../unipoole/skin/datatables/jquery.dataTables.css" type="text/css" rel="stylesheet" media="all"/>
+        <link href="../../unipoole/skin/jqueryUI/jquery-ui.css" type="text/css" rel="stylesheet" media="all"/>
+        <link href="../../unipoole/skin/unipoole.css" type="text/css" rel="stylesheet" media="all"/>
+
+        <link href="skin/yaft.css" type="text/css" rel="stylesheet" media="all"/>
+
+        <script type="text/javascript" language="JavaScript" src="../../unipoole/js/sakai/headscripts.js"></script>
+
+        <script type="text/javascript" language="JavaScript" src="../../unipoole/js/jquery/jquery-1.7.2.js"></script>
+        <script type="text/javascript" language="JavaScript" src="../../unipoole/js/jqueryUI/jquery-ui.js"></script>
+        <script type="text/javascript" language="JavaScript" src="../../unipoole/js/unipoole.utilities.js"></script>
+        <script type="text/javascript" language="JavaScript" src="../../unipoole/js/handlebars/handlebars.js"></script>
+        <script type="text/javascript" language="JavaScript" src="../../unipoole/js/unipoole.handlebar.helpers.js"></script>
+        <script type="text/javascript" language="JavaScript" src="../../unipoole/js/moment/moment.min.js"></script>
+        <script type="text/javascript" language="JavaScript" src="../../unipoole/js/datatables/jquery.dataTables.js"></script>
+        <script type="text/javascript" language="JavaScript" src="../../unipoole/js/unipoole.variables.js"></script>
+        <script type="text/javascript" language="JavaScript" src="../../unipoole/js/unipoole.message.js"></script>
+
+        <script type="text/javascript" language="JavaScript" src="js/YaftHelper.js"></script>
+        <script type="text/javascript" language="JavaScript" src="js/yaft.handlebars.helpers.js"></script>
+        <script type="text/javascript" language="JavaScript" src="js/yaft.viewDiscussion.js"></script>
+
+
+    </head>
+    <body marginwidth="0" marginheight="0">
+        <div class="portletBody">
+        <ul role="menu" class="navIntraTool actionToolBar" id="yaft_toolbar">    
+            <li role="menuitem" id="yaft_home_link"><span class="firstToolBarItem"><a href="yaft.html" title="Return to the start page">Home</a></span></li>
+            <li id="yaft_minimal_link" role="menuitem" style="display: inline;"><span><a href="javascript:yaftToggleMini();" title="Click this for a compact view of the topic">Minimal</a></span></li>
+            <li id="yaft_authors_view_link" role="menuitem" style="display: inline;"><span><a href="javascript:;" title="Click to view a list of the people in this site who have posted messages">Authors</a></span></li>
+        </ul>
+            <br />
+            <div id="yaft_container">
+                <div id="yaft_breadcrumb"><a href="yaft.html">Forums</a> -&gt; <a id="forumTitle"></a> -&gt; <span id="discussionTitle"></span></div>
+            </div>
+            <br />
+            <br />
+            <div id="yaft_content">
+                <a href="javascript:yaftMarkAllAsRead();">Mark entire discussion as read</a>
+                <br />
+                <br />
+                <div id="messages">
+                    <div id="discussion">
+                    </div>
+	                <div id="yaft_messages" class="yaft_messages">
+	                </div>
+                </div>
+                <a href="javascript:yaftMarkAllAsRead();">Mark entire discussion as read</a>
+			</div>
+        </div>
+    </body>
+</html>

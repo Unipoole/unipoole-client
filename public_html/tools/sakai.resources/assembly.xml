@@ -1,0 +1,44 @@
+<assembly xmlns="http://maven.apache.org/plugins/maven-assembly-plugin/assembly/1.1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://maven.apache.org/plugins/maven-assembly-plugin/assembly/1.1.0 http://maven.apache.org/xsd/assembly-1.1.0.xsd">
+    <id>create-zip</id>
+    <formats>
+        <format>zip</format>
+    </formats>
+    <includeBaseDirectory>false</includeBaseDirectory>
+    <fileSets>
+        <fileSet>
+            <excludes>
+                <exclude>assembly.xml</exclude>
+                <exclude>pom.xml</exclude>
+                <exclude>data/**</exclude>
+                <exclude>js/**</exclude>
+                <exclude>skin/**</exclude>
+                <exclude>minified/**</exclude>
+                <exclude>target/**</exclude>
+            </excludes>
+            <filtered>false</filtered>
+        </fileSet>
+        <fileSet>
+            <directory>${basedir}/minified/js</directory>            
+            <includes>
+                <include>**/*.js</include>           
+            </includes>
+            <outputDirectory>js</outputDirectory>
+        </fileSet>
+        <fileSet>
+            <directory>${basedir}/minified/skin</directory>            
+            <includes>
+                <include>**/*.css</include>           
+            </includes>
+            <outputDirectory>skin</outputDirectory>
+        </fileSet>
+        <fileSet>
+            <directory>../</directory>
+            <includes>
+                <include>about.json</include>
+            </includes>
+            <filtered>true</filtered>
+            <outputDirectory>/data</outputDirectory>
+        </fileSet>
+    </fileSets>
+</assembly>

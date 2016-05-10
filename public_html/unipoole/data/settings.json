@@ -1,0 +1,21 @@
+{
+    "maxSize": "3072",
+    "maxFiles": "5",
+    "filePath": "../../unipoole/server/logs/logs.txt",
+    "logToConsole": true,
+    "sync_server": "http://your.server.domain:port",
+    "sync_port": "8081",
+    "dns_check_online": "www.google.com",
+    "allowCodeSync": false,
+    "syncCheckTimeout": 2,
+    "onlineCheckFrequency": 1300,
+    "devMode": true,
+    "http_request_timeout": 15000,
+    "productionLevels": [
+        "error"
+    ],
+    "developmentLevels": [
+        "debug", "info", "warn", "error"
+    ]
+
+}

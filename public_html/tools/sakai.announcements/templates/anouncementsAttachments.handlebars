@@ -1,0 +1,17 @@
+{{!  
+    This template adds the attachment links to the announcements detail table
+
+    @author OpenCollab
+    @since 1.0.0
+}}
+<br>
+<br>
+<h4>Attachments</h4>
+<ul class="attachList">
+    {{#each attachments}}
+    <li>
+        {{{resourceIcon mime_type}}}
+        <a href="data/{{downloadPath}}" target="_blank" title="Opens in a new window">{{name}}</a> ({{resourceSize false size}})
+    </li>
+    {{/each}}
+</ul>

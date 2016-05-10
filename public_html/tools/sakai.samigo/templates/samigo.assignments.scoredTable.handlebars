@@ -1,0 +1,71 @@
+{{!  
+    This template populates the announcements table
+
+    @author OpenCollab
+    @since 1.0.0
+}}
+<table id="scoredTable" class="listHier" border="0" cellspacing="0" summary="You have completed the assessments listed below">
+<thead>    
+    <tr>
+        <th id="title" >Title</th>
+        <th id="stats">Statistics</th>
+        <th id="recorded_score">Recorded Score</th>
+        <th id="feedback_available">Feedback Available</th>
+        <th id="individual_score" data-samigo="details">Individual Score</th>
+        <th id="time" data-samigo="details">Time</th>
+        <th id="submitted" data-samigo="details">Submitted</th>
+    </tr>
+</thead>
+<tbody>
+    {{#each this}}
+    <tr>
+        <td headers="title">
+            <b>{{title}}</b>
+        </td>
+        <td headers="stats">
+            <b>{{stats}}</b>
+        </td>
+        <td headers="recorded_score">
+            <b>{{recorded_score}}</b>
+        </td>
+        <td headers="feedback_available">
+            <b>{{feedback_available}}</b>
+        </td>
+        <td headers="individual_score" data-samigo="details">
+            &nbsp;
+        </td>
+        <td headers="time" data-samigo="details">
+            &nbsp;
+        </td>
+        <td headers="submitted" data-samigo="details">
+            &nbsp;
+        </td>
+    </tr>
+    {{#each this.scores}}
+    <tr data-samigo="details">
+        <td headers="title">
+            &nbsp;
+        </td>
+        <td headers="stats">
+            &nbsp;
+        </td>
+        <td headers="recorded_score">
+            &nbsp;
+        </td>
+        <td headers="feedback_available">
+            &nbsp;
+        </td>
+        <td headers="individual_score" data-samigo="details">
+            {{individual_score}}
+        </td>
+        <td headers="time" data-samigo="details">
+            {{time}}
+        </td>
+        <td headers="submitted" data-samigo="details">
+            {{displayDate submitted}}
+        </td>
+    </tr>
+    {{/each}}
+    {{/each}}
+</tbody>
+</table>

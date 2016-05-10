@@ -1,0 +1,48 @@
+{{!  
+    This template builds the resources tree table html
+
+    @author OpenCollab
+    @since 1.0.0
+}}
+<table id="moduleTable" class="listHier lines centerLines" border='0' cellpadding='3' cellspacing='0' width='100%'>
+    <thead>
+        <tr>
+            <th style="border:none" id="expansion" data-expand='collapsed'>
+		<a id='expandAll' title="Expand All" href="#">
+                    <img hspace="0" border="0" alt="Expand All" title="Expand All" src="../../unipoole/image/expand-collapse.gif">
+		</a>
+                <a id='collapseAll' title="Collapse All" href="#" style='display:none;'>
+                    <img hspace="0" border="0" alt="Collapse All" title="Collapse All" src="../../unipoole/image/collapse-expand.gif">
+		</a>
+                Title								 
+	    </th>
+            <th>Open</th>
+            <th>Due</th>
+            <th>Allow Until</th>
+            <th>Last Visit</th>
+            <th/>
+        </tr>
+    </thead>
+    <tbody>
+    {{#each this}}
+        <tr class='row{{getAltRowId parent_id tt_id}}' data-tt-id='{{tt_id}}' data-tt-parent-id='{{tt_parent_id}}'>
+            {{#if isParent}}
+            <td>{{{meleteStatus status}}} {{tt_id}}. <a target='_self' href='module.html?id={{id}}'>{{title}}</a></td>
+            {{else}}
+            <td> <a target='_self' href='moduleSection.html?id={{id}}'>{{title}}</a></td>
+            {{/if}}
+            <td class='ListDateClass'>{{displayDateIf isParent open 'DD MMM YYYY h:mm a'}}</td>
+            <td class='ListDateClass'>{{displayDateIf isParent due 'DD MMM YYYY h:mm a'}}</td>
+            <td class='ListDateClass'>{{displayDateIf isParent allowUntil 'DD MMM YYYY h:mm a'}}</td>
+            <td class='ListDateClass'>{{displayDateIf isParent last_visit 'DD MMM YYYY h:mm a'}}</td>
+            <td>
+                {{#if isParent}}
+                <a id='print' title="Print" href="#" onclick="meleteUtilities.printSection({{id}});">
+                    <img hspace="0" border="0" alt="Print" title="Print" src="../../unipoole/image/printer.png">
+		</a>
+                {{/if}}
+            </td>
+        </tr>
+    {{/each}}
+    </tbody>
+</table>
