@@ -145,24 +145,12 @@
                 <defaultGoal>clean assembly:single</defaultGoal>
             </build>
         </profile>
-        <profile>
-            <id>nightly</id>
-            <build>
-                <defaultGoal>clean assembly:single deploy:deploy</defaultGoal>
-            </build>
-        </profile>
-        <profile>
-            <id>release</id>
-            <build>
-                <defaultGoal>clean assembly:single deploy:deploy</defaultGoal>
-            </build>
-        </profile>
     </profiles>
     <url>https://github.com/Unipoole/unipoole-client</url>
     <scm>
     	<url>https://github.com/Unipoole/unipoole-client/tree/master</url>
-    	<connection>scm:git:https://github.com/Unipoole/unipoole-client/tree/master</connection>
-    	<developerConnection>scm:git:https://github.com/Unipoole/unipoole-client/tree/master</developerConnection>
+    	<connection>scm:git:https://github.com/Unipoole/unipoole-client.git</connection>
+    	<developerConnection>scm:git:https://github.com/Unipoole/unipoole-client.git</developerConnection>
     </scm>
     <ciManagement>
     	<system>Travis-CI</system>
