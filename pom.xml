@@ -24,6 +24,30 @@
         <module>public_html/tools/unisa.faqs</module>
         <module>public_html/tools/unisa.welcome</module>
     </modules>
+    <repositories>
+        <repository>
+            <name>OpenCollab Nexus Release Repo</name>
+            <id>oc-nexus-releases</id>
+            <url>http://nexus.opencollab.co.za/nexus/content/repositories/releases</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+        <repository>
+            <name>OpenCollab Nexus Snapshot Repo</name>
+            <id>oc-nexus-snapshots</id>
+            <url>http://nexus.opencollab.co.za/nexus/content/repositories/snapshots</url>
+            <releases>
+                <enabled>false</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
     <build>
         <defaultGoal>clean yuicompressor:compress assembly:single</defaultGoal>
         <resources>
@@ -138,5 +162,10 @@
     <scm>
     	<url>https://github.com/Unipoole/unipoole-client/tree/master</url>
     	<connection>scm:git:https://github.com/Unipoole/unipoole-client/tree/master</connection>
+    	<developerConnection>scm:git:https://github.com/Unipoole/unipoole-client/tree/master</developerConnection>
     </scm>
+    <ciManagement>
+    	<system>Travis-CI</system>
+    	<url>https://travis-ci.org/Unipoole/unipoole-client</url>
+    </ciManagement>
 </project>
