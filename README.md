@@ -28,3 +28,4 @@ Run the file (after the Unipoole-Service has been started)
 
 ## Documentation
 * [Install and Run](./docs/install-and-run.md)
+* [Settings](./docs/settings.md)
