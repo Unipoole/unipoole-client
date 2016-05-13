@@ -25,3 +25,6 @@ Alter the `unipoole-service/src/test/curl/loadtools` file as follows:
 * `BASE_URL` must point to local unipoole server
 * `LOCATION` must point to the temp/upload folder
 Run the file (after the Unipoole-Service has been started)
+
+## Documentation
+* [Install and Run](./docs/install-and-run.md)
