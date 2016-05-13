@@ -4,6 +4,9 @@
 # unipoole-client
  This is the application that will run on the users/students PC. This project consist mainly of HTML/CSS and Javascript.
 
+<img src="http://unipoole.github.io/images/unipoole-client/overview.png" style="max-width: 100%" />
+
+
 ## Building
 ```bash
 git clone https://github.com/Unipoole/unipoole-client.git
