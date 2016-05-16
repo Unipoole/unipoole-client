@@ -159,9 +159,17 @@
             UNIPOOLE_GLOBAL.unipooleData.moduleId = moduleId;
             jQuery('#moduleCode').text(moduleId);
             UNIPOOLE_GLOBAL.unipooleData.lms_id = lms_id;
-            if (callback) {
-                callback();
-            }
+            /* 
+             * Once registration is complete we need to update unipoole data to contain the
+             * updated tool versions.
+             */
+            jQuery.getJSON('unipoole/data/unipooleData.json', function(unipooleData) {
+                UNIPOOLE_GLOBAL.unipooleData = jQuery.extend(true, UNIPOOLE_GLOBAL.unipooleData, unipooleData);
+                
+                if (callback) {
+                    callback();
+                }
+            });
         });
     }
 

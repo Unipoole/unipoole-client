@@ -13,8 +13,7 @@ var logger = require('./logger');
 var dns = require('dns');
 var dat = require('./dat');
 var config = require("../../data/settings.json");
-var resourcesUtil = require('./ResourcesUtil');
-
+var ClientRegistrationUtil = require('./ClientRegistrationUtil');
 
 /* 
  * Flag if we need to sync online now
@@ -179,13 +178,24 @@ module.exports = function(app) {
     });
     
     /**
+     * Call the register service
+     */
+    app.get('/contentMappings/:fromSite/:toSite/:toolName', function(req, res) {
+    	var fromSite =  req.params.fromSite;
+    	var toSite = req.params.toSite;
+    	var toolName = req.params.fromSite;
+        sync.callSyncServer('/unipoole-service/service-synch/contentMappings/' + fromSite+ '/'+toSite+'/'+toolName, 'GET', null, res);
+    });
+    
+    /**
      * Called after registration is succesfull, tools can check if they must
      * make master to group site changes1
      */
     function postRegister(registerData, data, response) {
-         resourcesUtil.postRegister(registerData, data, response);
-         response.send(registerData);
-         response.end();
+    	ClientRegistrationUtil.intialiseTools(registerData, data, response, function(){
+    		 response.send(registerData);
+             response.end();
+    	});
     }
     
     /**
@@ -234,7 +244,7 @@ module.exports = function(app) {
             };
 
             dat.getUnipooleData(function(unipooleData) {
-                sync.callSyncServer('/unipoole-service/service-synch/content/' + unipooleData.username + '/' + unipooleData.deviceId + '/' + unipooleData.moduleCode + '/' + toolName, 'PUT', reqData, res, cleanupTool);
+                sync.callSyncServer('/unipoole-service/service-synch/content/' + unipooleData.username + '/' + unipooleData.deviceId + '/' + unipooleData.moduleId + '/' + toolName, 'PUT', reqData, res, cleanupTool);
             });
 
         });

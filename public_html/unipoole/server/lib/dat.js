@@ -89,11 +89,15 @@ function getToolDataFilePath(toolName) {
 }
 
 /**
- * Write an object that represents the new data for a tool, to the tool's data file
+ * Write an object that represents the new data for a tool, to the tool's data file.
+ * @param toolName - Name of the tool to write data to
+ * @param dataObject - Object or String representing the data for the tool
+ * @param callback - Function to call when complete
  */
 var writeToolData = function(toolName, dataObject, callback) {
+	var dataString  = typeof(dataObject) == "string" ? dataObject : JSON.stringify(dataObject, null, 4);
     writeFile(getToolDataFilePath(toolName),
-            JSON.stringify(dataObject, null, 4),
+    		dataString,
             function(error) {
                 callback(error);
             });
